@@ -12,12 +12,14 @@
         android:background="#82ffffff"
         android:orientation="vertical">
 
+
+
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Name"
+            android:hint="name"
             android:inputType="textPersonName"
             android:textColorHint="@color/colorPrimary"
 
@@ -27,7 +29,7 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="user_name"
             android:textColorHint="@color/colorPrimary" />
 
         <EditText
@@ -35,16 +37,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
+            android:hint="password"
             android:inputType="textPassword"
             android:textColorHint="@color/colorPrimary" />
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/edt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email Adress"
+            android:hint="email address"
             android:inputType="number"
             android:textColorHint="@color/colorPrimary" />
 
@@ -54,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin1"
             android:background="@color/colorPrimaryDark"
-            android:text="Register"
+            android:text="register"
             android:textColor="@color/textcolorPrimaryDark" />
 
 
