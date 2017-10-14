@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud2">
+    android:background="@drawable/backgroud21">
 
 
     <!--Content-->
@@ -24,7 +24,7 @@
 
             android:layout_width="@dimen/icon"
             android:layout_height="@dimen/icon"
-            android:src="@drawable/do6" />
+            android:src="@drawable/do7" />
 
         <!--Title-->
         <TextView
@@ -54,9 +54,9 @@
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:hint="User :"
                 android:inputType="text"
-                android:layout_gravity="bottom"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimary" />
 
@@ -81,8 +81,8 @@
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password :"
                 android:layout_gravity="bottom"
+                android:hint="Password :"
                 android:inputType="textPassword"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimary" />

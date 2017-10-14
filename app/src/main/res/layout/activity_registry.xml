@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud2"
+    android:background="@drawable/backgroud21"
     android:padding="@dimen/margin">
 
     <LinearLayout
@@ -35,18 +35,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:textColorHint="@color/colorPrimary"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:textColorHint="@color/colorPrimary"
             android:hint="Email Adress"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColorHint="@color/colorPrimary" />
 
         <Button
             android:id="@+id/bRegister"
@@ -58,15 +58,13 @@
             android:textColor="@color/textcolorPrimaryDark" />
 
 
-
-
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imgReg"
-        android:layout_below="@+id/linEdit"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_below="@+id/linEdit"
         android:src="@mipmap/ic_registry" />
 
 
