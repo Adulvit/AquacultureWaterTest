@@ -47,7 +47,7 @@
 
         <GridView
             android:padding="1dp"
-            android:background="#ffffff"
+            android:background="#82ffffff"
             android:id="@+id/gridView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

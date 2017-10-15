@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="title">
+        <item>Dissolved Oxygen</item>
+        <item>Water Temperature</item>
+        <item>pH</item>
+        <item>Alkalinity</item>
+        <item>Total Ammonia</item>
+        <item>Nitrite</item>
+        <item>Hardness</item>
+        <item>Turbidity</item>
+
+    </string-array>
+
+
+    <string-array name="unit">
+        <item>mg/L</item>
+        <item>OC</item>
+        <item>""</item>
+        <item>mg/L</item>
+        <item>mg/L</item>
+        <item>mg/L</item>
+        <item>mg/L</item>
+        <item>cm</item>
+
+    </string-array>
+
+    <drawable name="inner_image">
+        <item></item>
+
+    </drawable>
+
+
+
+    <string-array name="my_profile">
+        <item>\nชื่อ : นายอดุลวิทย์ จันทะนาวงษ์\nMr.Adulvit Chanthanawong\nเกิดวันที่ 3 ตุลาคม 2522\nอายุ 38 ปี\nภูมิลำเนา จ.อุบลราชธานี\nLine ID : adulvitc\nTel : 089-8143326
+        </item>
+        <item>ประวัติการศึกษา :\n- ระดับชั้นประถมศึกษาปีที่ 1 - 6 โรงเรียนอุบลวิทยาคม จ.อุบลราชธานี\n- ระดับชั้นมัธยมศึกษาปีที่ 1 - 6 โรงเรียนเบ็ญจะมะมหาราช จ.อุบลราชธานี\n- ระดับปริญญาตรี คณะเกษตรศาสตร์ สาขาวิชาประมง มหาวิทยาลัยขอนแก่น จ.ขอนแก่น\n\n
+        ประวัติการทำงาน :\n- ปี พ.ศ.2545 - 2549 ตำแหน่งนักวิชาการประมงประจำศูนย์วิจัยสัตว์น้ำจืด จ.สุพรรณบุรี บริษัท เจริญโภคภัณฑ์อาหาร จำกัด ( มหาชน )\n- ปี พ.ศ. 2549 - 2552 ตำแหน่งนักวิชาการประมงประจำศูนย์วิจัยและปรับปรุงพันธุกรรมสัตว์น้ำจืด จ.พระนครศรีอยุธยา บริษัท เจริญโภคภัณฑ์อาหาร จำกัด ( มหาชน )\n- ปี พ.ศ. 2552 - ปัจจุบัน ตำแหน่งนักวิชาการอาวุโส ศูนย์นวัตกรรมเกษตรอุตสาหกรรม ฝ่ายบริการวิชาการ(สัตว์น้ำ) บริษัท เบทาโกร จำกัด (มหาชน)\n\n
+        ความสนใจพิเศษ : พัฒนาโปรแกรมและแอพพลิเคชั่นในระบบ android และ ios และเขียนเว็บไซต์\n\n
+        ผลงานที่ผ่านมา : แอพลิเคชั่นแอนดรอยด์ Drug Dose Calculator
+        </item>
+    </string-array>
+
+
+</resources>
