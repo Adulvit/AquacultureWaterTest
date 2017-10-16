@@ -52,4 +52,8 @@ public class GridViewAdapter extends BaseAdapter {
 
         return view1;
     }
-}
+
+
+}   //Main Class
+
+
