@@ -29,7 +29,9 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="user_name"
+            android:hint="user name"
+            android:inputType="text"
+            android:ems="10"
             android:textColorHint="@color/colorPrimary" />
 
         <EditText

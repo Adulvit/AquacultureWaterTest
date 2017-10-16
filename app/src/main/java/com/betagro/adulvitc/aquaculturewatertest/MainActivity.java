@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                Intent intent = new Intent(MainActivity.this, Detail2Activity.class);
                 intent.putExtra("Image", imageInts[position]);
                 intent.putExtra("title", position);
                 intent.putExtra("Unit", position);

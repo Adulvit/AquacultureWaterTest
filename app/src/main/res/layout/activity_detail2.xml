@@ -1,69 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/margin1"
     android:background="@drawable/backgroud21">
 
-
-    <!--Content-->
+    <!--inputValue-->
     <LinearLayout
-        android:id="@+id/linTitle"
+        android:id="@+id/linImg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="5dp"
-        android:paddingTop="@dimen/margin1"
-        android:paddingBottom="@dimen/margin1">
+        android:layout_height="200dp"
+        android:orientation="vertical">
 
-        <!--Title-->
         <TextView
             android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="Title"
+            android:textStyle="bold"
             android:textColor="@color/textcolorPrimaryDark"
-            android:textSize="@dimen/h1"
-            android:textStyle="bold" />
+            android:textSize="@dimen/h1" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin1"
-            android:layout_marginTop="@dimen/margin1"
-            android:orientation="horizontal"
-            android:weightSum="1">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imvInner"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="0.25"
+                android:id="@+id/imgInner"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:src="@mipmap/ic_launcher" />
 
             <EditText
                 android:id="@+id/edtValue"
-                android:layout_width="120dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:background="#46000000"
-                android:inputType="numberDecimal"
-                android:textColor="@color/textcolorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="right"
                 android:textSize="50sp"
-                android:textStyle="bold" />
-
+                android:inputType="numberDecimal"
+                android:textColor="@color/textcolorPrimaryDark"/>
 
             <TextView
                 android:id="@+id/txtUnit"
-                android:layout_width="100dp"
+                android:layout_width="77dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="left"
                 android:textColor="@color/textcolorPrimaryDark"
-                android:textSize="25sp" />
+                android:textSize="@dimen/h1" />
 
 
         </LinearLayout>
@@ -72,50 +63,49 @@
     </LinearLayout>
 
 
+    <!--detailScrollView-->
     <LinearLayout
-        android:id="@+id/linScr"
+        android:id="@+id/linScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/linButton2"
-        android:layout_below="@+id/linTitle"
+        android:layout_above="@+id/linBTN"
+        android:layout_below="@+id/linImg"
         android:gravity="center_horizontal"
-        android:paddingLeft="@dimen/h2"
-        android:paddingRight="@dimen/h2"
-        android:paddingTop="0dp">
-
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#46000000"
-            android:paddingTop="0dp">
-
+            android:background="#46000000">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <!--Detail-->
                 <TextView
                     android:id="@+id/txtDetail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin1"
+                    android:layout_margin="10dp"
                     android:text="Detail"
                     android:textColor="@color/textcolorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:textSize="18sp" />
 
 
             </LinearLayout>
+
+
         </ScrollView>
 
 
     </LinearLayout>
 
+
     <!--Button-->
     <LinearLayout
-        android:id="@+id/linButton2"
+        android:id="@+id/linBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -125,24 +115,25 @@
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="BackPage2"
-            android:text="Back"
+            android:text="back"
             android:textColor="@color/textcolorPrimaryDark" />
 
         <Button
             android:id="@+id/btnNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:text="Next"
+            android:text="next"
             android:textColor="@color/textcolorPrimaryDark" />
+
 
     </LinearLayout>
 
 
 </RelativeLayout>
+
