@@ -24,7 +24,7 @@
 
             android:layout_width="@dimen/icon"
             android:layout_height="@dimen/icon"
-            android:src="@drawable/do7" />
+            android:src="@drawable/do2" />
 
         <!--Title-->
         <TextView
