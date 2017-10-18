@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("title", position);
                 intent.putExtra("Unit", position);
                 intent.putExtra("imgID", arrImg[position]);
+                intent.putExtra("longDetail", position);
+                intent.putExtra("subtitle", position);
 
                 startActivity(intent);
 
