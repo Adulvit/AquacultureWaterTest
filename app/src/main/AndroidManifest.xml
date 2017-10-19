@@ -20,6 +20,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Detail2Activity"
+            android:label="Water Quality Index"
             android:windowSoftInputMode="adjustPan"
             android:parentActivityName=".DetailActivity"
             />

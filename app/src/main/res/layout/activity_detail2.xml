@@ -11,17 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txtTitle"
-            android:layout_marginTop="@dimen/margin1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:text="Water Quality Index"
-            android:textColor="@color/textcolorPrimaryDark"
-            android:textSize="@dimen/h1"
-            android:textStyle="bold" />
 
         <!--inputValue-->
 
@@ -42,10 +31,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:background="#96000000"
+                    android:background="#50ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -82,10 +72,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -122,10 +113,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -161,10 +153,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -200,10 +193,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -239,10 +233,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -278,10 +273,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
@@ -317,10 +313,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#96000000"
+                    android:background="#82ffffff"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
