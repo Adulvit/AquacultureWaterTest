@@ -111,15 +111,6 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:text="back"
-            android:textColor="@color/textcolorPrimaryDark" />
 
         <Button
             android:id="@+id/btnNext"
