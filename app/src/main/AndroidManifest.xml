@@ -20,7 +20,9 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Detail2Activity"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan"
+            android:parentActivityName=".DetailActivity"
+            />
         <activity android:name=".DetailActivity" android:parentActivityName=".MainActivity">
 
 
