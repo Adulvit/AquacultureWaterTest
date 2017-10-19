@@ -2,7 +2,6 @@ package com.betagro.adulvitc.aquaculturewatertest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 public class DetailActivity extends AppCompatActivity {
 
     private ImageView innerImageView;
-    private Button nextButton, backButton;
+    private Button nextButton;
     private TextView titleTextView, subtitleTextView, detailTextView;
 
     @Override
@@ -20,7 +19,6 @@ public class DetailActivity extends AppCompatActivity {
 
         final ImageView innerImageView = (ImageView) findViewById(R.id.imgInner);
         final Button nextButton = (Button) findViewById(R.id.btnNext);
-        final Button backButton = (Button) findViewById(R.id.btnBack);
         final TextView titleTextView = (TextView) findViewById(R.id.txtTitle);
         final TextView subtitleTextView = (TextView) findViewById(R.id.txtSubTitle);
         final TextView detailTextView = (TextView) findViewById(R.id.txtDetail);
@@ -42,13 +40,11 @@ public class DetailActivity extends AppCompatActivity {
         subtitleTextView.setText(subtitleStrings[subtitle]);
 
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
+
+
 
 
     }   //Main Method

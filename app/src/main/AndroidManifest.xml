@@ -21,7 +21,10 @@
         <activity
             android:name=".Detail2Activity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".DetailActivity" android:parentActivityName=".MainActivity">
+
+
+        </activity>
     </application>
 
 </manifest>
