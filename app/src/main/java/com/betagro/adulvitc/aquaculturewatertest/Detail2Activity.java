@@ -56,7 +56,7 @@ public class Detail2Activity extends AppCompatActivity {
             }
         });
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        /*nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Detail2Activity.this, DetailActivity.class);
@@ -70,6 +70,7 @@ public class Detail2Activity extends AppCompatActivity {
 
             }
         });
+        */
 
 
     }   //Main Method

@@ -5,71 +5,61 @@
     android:background="@drawable/backgroud21"
     android:padding="@dimen/margin1">
 
-    <!--inputValue-->
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:orientation="vertical">
+
 
         <LinearLayout
+            android:id="@+id/linImg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="120dp"
             android:orientation="vertical">
 
 
             <LinearLayout
-                android:id="@+id/linImg"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/imgInner"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imgInner"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <LinearLayout
-                        android:layout_marginLeft="@dimen/margin1"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    android:layout_marginLeft="@dimen/margin1"
+                    android:orientation="vertical">
 
 
-                        <TextView
-                            android:id="@+id/txtTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_horizontal"
-                            android:gravity="bottom"
-                            android:text="Title"
-                            android:layout_weight="1"
-                            android:textColor="@color/textcolorPrimaryDark"
-                            android:textSize="@dimen/h1"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="Title"
+                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/txtSubTitle"
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_horizontal"
-                            android:gravity="top"
-                            android:text="SubTitle"
-                            android:textColor="@color/textcolorPrimaryDark"
-                            android:textSize="@dimen/h2"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="SubTitle"
+                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textSize="@dimen/h2"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -78,80 +68,74 @@
             </LinearLayout>
 
 
-            <!--detailScrollView-->
-            <LinearLayout
-                android:id="@+id/linScroll"
+        </LinearLayout>
+
+
+        <!--detailScrollView-->
+        <LinearLayout
+            android:id="@+id/linScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/linBTN"
-                android:layout_below="@+id/linImg"
-                android:layout_marginBottom="@dimen/margin1"
-                android:layout_marginTop="@dimen/margin1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:background="#c8000000">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
 
-
-                    <LinearLayout
-                        android:background="#b4000000"
+                    <TextView
+                        android:id="@+id/txtDetail"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_margin="10dp"
+                        android:gravity="fill"
+                        android:text="Detail"
+                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textSize="18sp" />
 
-                        <TextView
-                            android:id="@+id/txtDetail"
-                            android:layout_gravity="fill"
-                            android:gravity="fill"
+                    <!--Button-->
+                    <LinearLayout
+                        android:id="@+id/linBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin1"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btnNext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:text="Detail"
-                            android:textColor="@color/textcolorPrimaryDark"
-                            android:textSize="18sp" />
+                            android:layout_marginLeft="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="go to calculte"
+                            android:textColor="@color/textcolorPrimaryDark" />
 
 
                     </LinearLayout>
 
+                </LinearLayout>
 
 
+            </ScrollView>
 
-            </LinearLayout>
-
-
-            <!--Button-->
-            <LinearLayout
-                android:id="@+id/linBTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnBack"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
-                    android:text="back"
-                    android:textColor="@color/textcolorPrimaryDark" />
-
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="1dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
-                    android:text="next"
-                    android:textColor="@color/textcolorPrimaryDark" />
-
-
-            </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
