@@ -31,7 +31,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:background="#50ffffff"
+                    android:background="#640033cc"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -72,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#64009933"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -95,15 +95,15 @@
                         android:textColor="@color/textcolorPrimaryDark"
                         android:textSize="50sp" />
 
-                    <TextView
+                    <ImageView
                         android:id="@+id/txtUnit"
                         android:layout_width="77dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
-                        android:text="C"
-                        android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:src="@drawable/celceus"
+
+                        />
 
 
                 </LinearLayout>
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#640099ff"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -153,7 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#64ff6633"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -193,7 +193,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#649900cc"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -233,7 +233,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#64ff0000"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -273,7 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#6433cc33"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -313,7 +313,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="2dp"
-                    android:background="#82ffffff"
+                    android:background="#64333333"
                     android:orientation="horizontal">
 
                     <ImageView
