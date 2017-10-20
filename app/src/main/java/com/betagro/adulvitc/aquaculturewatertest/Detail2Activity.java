@@ -36,6 +36,14 @@ public class Detail2Activity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

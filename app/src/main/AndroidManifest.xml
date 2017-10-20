@@ -21,15 +21,13 @@
         <activity
             android:name=".Detail2Activity"
             android:label="Water Quality Parameter"
-            android:windowSoftInputMode="adjustPan"
             android:parentActivityName=".DetailActivity"
-            />
-        <activity android:name=".DetailActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DetailActivity"
             android:label="Detail of Water Quality"
-            android:parentActivityName=".MainActivity">
-
-
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".PieChartActivity"></activity>
     </application>
 
 </manifest>
