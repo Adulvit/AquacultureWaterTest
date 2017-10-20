@@ -20,11 +20,13 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Detail2Activity"
-            android:label="Water Quality Index"
+            android:label="Water Quality Parameter"
             android:windowSoftInputMode="adjustPan"
             android:parentActivityName=".DetailActivity"
             />
-        <activity android:name=".DetailActivity" android:parentActivityName=".MainActivity">
+        <activity android:name=".DetailActivity"
+            android:label="Detail of Water Quality"
+            android:parentActivityName=".MainActivity">
 
 
         </activity>
