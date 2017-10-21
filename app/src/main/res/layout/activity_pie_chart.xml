@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.betagro.adulvitc.aquaculturewatertest.PieChartActivity">
 
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart"
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piechart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </lecho.lib.hellocharts.view.PieChartView>
+        android:layout_height="match_parent">
+    </com.github.mikephil.charting.charts.PieChart>
 
 
 
