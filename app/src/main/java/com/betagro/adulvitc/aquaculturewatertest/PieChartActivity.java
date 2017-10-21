@@ -63,6 +63,8 @@ public class PieChartActivity extends AppCompatActivity {
         data.setValueTextColor(Color.YELLOW);
 
         pieChart.setData(data);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }   //Main Method
 
 
