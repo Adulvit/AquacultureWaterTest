@@ -1,6 +1,7 @@
 package com.betagro.adulvitc.aquaculturewatertest;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class PieChartActivity extends AppCompatActivity {
 
     private PieChart pieChart;
+    private Drawable drawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,11 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setDragDecelerationFrictionCoef(0.95f);
 
         pieChart.setDrawHoleEnabled(true);
-        pieChart.setTransparentCircleRadius(61f);
+        pieChart.setTransparentCircleRadius(50f);
         pieChart.setHoleColor(Color.WHITE);
+        pieChart.setHoleRadius(40);
+        pieChart.setCenterText("Parameter");
+        pieChart.setCenterTextSize(20);
 
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
@@ -46,6 +51,11 @@ public class PieChartActivity extends AppCompatActivity {
         yValue.add(new PieEntry(34f, "Hardness"));
         yValue.add(new PieEntry(34f, "Turb"));
 
+
+
+
+
+
         Description description = new Description();
         description.setText("Water Quality Result");
         description.setTextSize(50);
@@ -56,13 +66,27 @@ public class PieChartActivity extends AppCompatActivity {
         PieDataSet dataSet = new PieDataSet(yValue, "Water Quality");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        //dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
 
         PieData data = new PieData(dataSet);
-        data.setValueTextSize(10f);
-        data.setValueTextColor(Color.YELLOW);
+        data.setValueTextSize(0f);
+        //data.setValueTextColor(Color.YELLOW);
 
         pieChart.setData(data);
+
+
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.rgb(79,129,189));
+        colors.add(Color.rgb(0,176,80));
+        colors.add(Color.rgb(0,176,240));
+        colors.add(Color.rgb(247,150,70));
+        colors.add(Color.rgb(128,100,162));
+        colors.add(Color.rgb(255,0,0));
+        colors.add(Color.rgb(155,187,89));
+        colors.add(Color.rgb(64,64,64));
+
+
+        dataSet.setColors(colors);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }   //Main Method

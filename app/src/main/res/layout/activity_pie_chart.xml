@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud21"
     tools:context="com.betagro.adulvitc.aquaculturewatertest.PieChartActivity">
 
     <com.github.mikephil.charting.charts.PieChart
