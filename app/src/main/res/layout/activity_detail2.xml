@@ -48,12 +48,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Farm Name : "
+                            android:text=" Farm Name : "
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
-                            android:gravity="center"
-                            android:textColor="#000000"
-                            android:textSize="25dp" />
+                            android:gravity="left"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/h1" />
 
                         <EditText
                             android:id="@+id/txtFarm"
@@ -79,17 +79,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Pond No. : "
+                            android:text=" Pond no. : "
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
-                            android:gravity="center"
-                            android:textColor="#000000"
-                            android:textSize="25dp" />
+                            android:gravity="left"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/h1" />
 
                         <EditText
                             android:id="@+id/txtPond"
                             android:hint="เช่น บ่อ5"
-                            android:inputType="number"
+                            android:inputType="text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="left"
