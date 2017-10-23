@@ -1,9 +1,9 @@
 package com.betagro.adulvitc.aquaculturewatertest;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -13,17 +13,44 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class PieChartActivity extends AppCompatActivity {
 
     private PieChart pieChart;
-    private Drawable drawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
+
+
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tdate = (TextView) findViewById(R.id.date);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy\nhh:mm a");
+                                String dateString = sdf.format(date);
+                                tdate.setText(dateString);
+
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+
+        };
+        t.start();
+
 
         pieChart = (PieChart) findViewById(R.id.piechart);
 
@@ -34,11 +61,12 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setDragDecelerationFrictionCoef(0.95f);
 
         pieChart.setDrawHoleEnabled(true);
-        pieChart.setTransparentCircleRadius(50f);
-        pieChart.setHoleColor(Color.WHITE);
+        pieChart.setTransparentCircleRadius(45f);
+        pieChart.setHoleColor(Color.TRANSPARENT);
         pieChart.setHoleRadius(40);
-        pieChart.setCenterText("Parameter");
+        //pieChart.setCenterText("Parameter");
         pieChart.setCenterTextSize(20);
+        pieChart.setTouchEnabled(false);
 
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
@@ -57,13 +85,13 @@ public class PieChartActivity extends AppCompatActivity {
 
 
         Description description = new Description();
-        description.setText("Water Quality Result");
+        description.setText("");
         description.setTextSize(50);
         pieChart.setDescription(description);
 
         pieChart.animateY(100, Easing.EasingOption.EaseInOutCubic);
 
-        PieDataSet dataSet = new PieDataSet(yValue, "Water Quality");
+        PieDataSet dataSet = new PieDataSet(yValue, "");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
         //dataSet.setColors(ColorTemplate.COLORFUL_COLORS);

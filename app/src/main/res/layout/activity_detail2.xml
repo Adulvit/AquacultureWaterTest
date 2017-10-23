@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroud21"
     android:orientation="vertical"
-    android:padding="@dimen/margin1">
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,11 +17,11 @@
         <!--inputValue-->
 
         <ScrollView
-
-            android:paddingLeft="1dp"
-            android:paddingRight="1dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,17 +29,95 @@
                 android:orientation="vertical">
 
 
+                <!--Input Text-->
+                <LinearLayout
+                    android:paddingRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="#80ffffff"
+                    android:orientation="vertical">
+
+                    <!--Farm name-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Farm Name : "
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <EditText
+                            android:id="@+id/txtFarm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:inputType="text"
+                            android:gravity="left"
+                            android:hint="เช่น ปริญญาพรฟาร์ม" />
+
+
+                    </LinearLayout>
+
+                    <!--Pond name-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pond No. : "
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="25dp" />
+
+                        <EditText
+                            android:id="@+id/txtPond"
+                            android:hint="เช่น บ่อ5"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
                 <!--Do-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:background="#b4000000"
+
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/do3" />
 
@@ -61,9 +141,9 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
                         android:text="mg/L"
-                        android:textStyle="bold"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -77,9 +157,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/temp3" />
 
@@ -118,9 +198,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ph3" />
 
@@ -158,9 +238,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/alk3" />
 
@@ -182,10 +262,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:text="mg/L"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -199,9 +279,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/amo3" />
 
@@ -223,10 +303,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:text="mg/L"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -240,9 +320,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/nitrite3" />
 
@@ -265,9 +345,9 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
                         android:text="mg/L"
-                        android:textStyle="bold"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -281,9 +361,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/hard3" />
 
@@ -306,9 +386,9 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
                         android:text="mg/L"
-                        android:textStyle="bold"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -322,9 +402,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:padding="3dp"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/disk3" />
 
@@ -347,9 +427,9 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="center"
                         android:text="cm"
-                        android:textStyle="bold"
                         android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="@dimen/h1"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -358,9 +438,9 @@
                     android:id="@+id/btnNext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginLeft="1dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimaryDark"
                     android:text="go to Result"
