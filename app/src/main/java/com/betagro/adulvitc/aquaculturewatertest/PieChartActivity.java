@@ -2,10 +2,14 @@ package com.betagro.adulvitc.aquaculturewatertest;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.widget.TextView;
-
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -58,6 +62,7 @@ public class PieChartActivity extends AppCompatActivity {
         t.start();
 
 
+
         pieChart = (PieChart) findViewById(R.id.piechart);
 
         pieChart.setUsePercentValues(true);
@@ -66,13 +71,17 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setDragDecelerationFrictionCoef(0.95f);
 
+
         pieChart.setDrawHoleEnabled(true);
-        pieChart.setTransparentCircleRadius(45f);
-        pieChart.setHoleColor(Color.TRANSPARENT);
-        pieChart.setHoleRadius(40);
-        //pieChart.setCenterText("Parameter");
-        pieChart.setCenterTextSize(20);
+        pieChart.setTransparentCircleRadius(55f);
+        pieChart.setHoleColor(Color.WHITE);
+        pieChart.setHoleRadius(50);
+        pieChart.setCenterText("developed by Adulvit\nTechnical Service Division\nBetagro Group");
+        pieChart.setCenterTextSize(13);
         pieChart.setTouchEnabled(false);
+
+
+
 
 
         ArrayList<PieEntry> yValue = new ArrayList<>();
@@ -125,6 +134,9 @@ public class PieChartActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+//        Set Header Text
+
         Intent FarmIndex = getIntent();
         String FNstr = FarmIndex.getStringExtra("FarmName");
         FarmNameTextView.setText(FNstr);
@@ -137,7 +149,13 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
+
+
+
+
     }   //Main Method
+
+
 
 
 }   //Main Class

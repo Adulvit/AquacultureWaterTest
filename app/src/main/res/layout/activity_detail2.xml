@@ -47,13 +47,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
+                            android:layout_weight="2.5"
                             android:text=" ชื่อฟาร์ม : "
+                            android:layout_marginLeft="5dp"
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
                             android:gravity="left"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/h1" />
+                            android:textSize="20sp" />
 
                         <EditText
                             android:id="@+id/txtFarm"
@@ -61,6 +62,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
+                            android:maxLength="15"
                             android:inputType="text"
                             android:gravity="left"
                             android:hint="เช่น ปริญญาพรฟาร์ม" />
@@ -78,18 +80,20 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text=" บ่อที่        : "
+                            android:layout_weight="2.5"
+                            android:layout_marginLeft="5dp"
+                            android:text="     บ่อที่    : "
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
                             android:gravity="left"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/h1" />
+                            android:textSize="20sp" />
 
                         <EditText
                             android:id="@+id/txtPond"
                             android:hint="เช่น บ่อ5"
                             android:inputType="text"
+                            android:maxLength="15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="left"

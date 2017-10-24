@@ -120,7 +120,7 @@
                             android:layout_marginLeft="1dp"
                             android:layout_weight="1"
                             android:background="@color/colorPrimaryDark"
-                            android:text="go to calculte"
+                            android:text="go to calculate"
                             android:textColor="@color/textcolorPrimaryDark" />
 
 
