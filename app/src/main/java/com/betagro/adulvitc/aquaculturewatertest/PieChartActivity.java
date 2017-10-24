@@ -1,5 +1,6 @@
 package com.betagro.adulvitc.aquaculturewatertest;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import java.util.ArrayList;
 
 public class PieChartActivity extends AppCompatActivity {
 
+
+    private TextView FarmNameTextView, PondTextView;
     private PieChart pieChart;
 
     @Override
@@ -25,6 +28,9 @@ public class PieChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
 
+
+        final TextView FarmNameTextView = (TextView) findViewById(R.id.txtFarm);
+        final TextView PondTextView = (TextView) findViewById(R.id.txtPond);
 
         Thread t = new Thread() {
             @Override
@@ -68,6 +74,7 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setCenterTextSize(20);
         pieChart.setTouchEnabled(false);
 
+
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
         yValue.add(new PieEntry(34f, "DO"));
@@ -83,7 +90,6 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
-
         Description description = new Description();
         description.setText("");
         description.setTextSize(50);
@@ -94,13 +100,14 @@ public class PieChartActivity extends AppCompatActivity {
         PieDataSet dataSet = new PieDataSet(yValue, "");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
-        //dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
 
         PieData data = new PieData(dataSet);
-        data.setValueTextSize(0f);
-        //data.setValueTextColor(Color.YELLOW);
+        data.setValueTextSize(10f);
+        data.setValueTextColor(Color.YELLOW);
 
         pieChart.setData(data);
+
 
 
         ArrayList<Integer> colors = new ArrayList<>();
@@ -117,6 +124,19 @@ public class PieChartActivity extends AppCompatActivity {
         dataSet.setColors(colors);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent FarmIndex = getIntent();
+        String FNstr = FarmIndex.getStringExtra("FarmName");
+        FarmNameTextView.setText(FNstr);
+
+        Intent PondIndex = getIntent();
+        String Pondstr = FarmIndex.getStringExtra("Pond");
+        PondTextView.setText(Pondstr);
+
+
+
+
+
     }   //Main Method
 
 

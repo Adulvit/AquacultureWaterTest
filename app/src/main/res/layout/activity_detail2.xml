@@ -47,12 +47,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text=" Farm Name : "
+                            android:layout_weight="2"
+                            android:text=" ชื่อฟาร์ม : "
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
                             android:gravity="left"
-                            android:textColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/h1" />
 
                         <EditText
@@ -78,12 +78,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text=" Pond no. : "
+                            android:layout_weight="2"
+                            android:text=" บ่อที่        : "
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
                             android:gravity="left"
-                            android:textColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/h1" />
 
                         <EditText

@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class Detail2Activity extends AppCompatActivity {
 
 
-    private EditText doEditText,TempEditText,pHEditText,AlkEditText,
+    private EditText FarmNameEditText,PondEditText,DOEditText,TempEditText,pHEditText,AlkEditText,
             AmmoEditText,NiteEditText,HardEditText,TurbEditText;
     private Button nextButton;
 
@@ -22,8 +22,9 @@ public class Detail2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail2);
 
-
-        final EditText doEditText = (EditText) findViewById(R.id.edtValueDo);
+        final EditText PondEditText = (EditText) findViewById(R.id.txtPond);
+        final EditText FarmNameEditText = (EditText) findViewById(R.id.txtFarm);
+        final EditText DOEditText = (EditText) findViewById(R.id.edtValueDo);
         final EditText TempEditText = (EditText) findViewById(R.id.edtValueTem);
         final EditText pHEditText = (EditText) findViewById(R.id.edtValuepH);
         final EditText AlkEditText = (EditText) findViewById(R.id.edtValueAlk);
@@ -34,12 +35,21 @@ public class Detail2Activity extends AppCompatActivity {
 
         final Button nextButton = (Button) findViewById(R.id.btnNext);
 
+
+
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
+                intent.putExtra("Pond", PondEditText.getText().toString());
+                intent.putExtra("FarmName", FarmNameEditText.getText().toString());
                 startActivity(intent);
             }
         });
