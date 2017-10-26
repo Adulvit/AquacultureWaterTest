@@ -66,11 +66,98 @@
         android:id="@+id/piechart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_below="@+id/linHeader">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
 
     </com.github.mikephil.charting.charts.PieChart>
+
+    <!--NH3-->
+    <LinearLayout
+        android:id="@+id/linNH3"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8064A2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ammonia" />
+
+        <TextView
+            android:id="@+id/txtNH3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="______"
+            android:maxLength="4"
+            android:textColor="@color/textcolorPrimaryDark"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:text="ppm"
+            android:textColor="@color/textcolorPrimaryDark"
+            android:textSize="13dp"
+            />
+
+
+    </LinearLayout>
+
+    <!--NH4-->
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8064A2"
+        android:layout_marginBottom="53dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ammonium" />
+
+        <TextView
+            android:id="@+id/txtNH4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="______"
+            android:textColor="@color/textcolorPrimaryDark"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:text="ppm"
+            android:textColor="@color/textcolorPrimaryDark"
+            android:textSize="13dp"
+            />
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

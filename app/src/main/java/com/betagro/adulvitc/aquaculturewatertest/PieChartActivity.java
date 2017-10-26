@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class PieChartActivity extends AppCompatActivity {
 
 
-    private TextView FarmNameTextView, PondTextView;
+    private TextView FarmNameTextView, PondTextView, NH3TextView, NH4TextView;
     private PieChart pieChart;
 
     @Override
@@ -28,9 +28,6 @@ public class PieChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
 
-
-        final TextView FarmNameTextView = (TextView) findViewById(R.id.txtFarm);
-        final TextView PondTextView = (TextView) findViewById(R.id.txtPond);
 
         Thread t = new Thread() {
             @Override
@@ -68,26 +65,55 @@ public class PieChartActivity extends AppCompatActivity {
 
 
         pieChart.setDrawHoleEnabled(true);
-        pieChart.setTransparentCircleRadius(55f);
+        pieChart.setTransparentCircleRadius(45f);
         pieChart.setHoleColor(Color.WHITE);
-        pieChart.setHoleRadius(50);
-        pieChart.setCenterText("developed by Adulvit\nTechnical Service Division\nBetagro Group");
+        pieChart.setHoleRadius(40);
+        pieChart.setCenterText("developed by Adulvit\nTechnical Service D.\nBetagro Group");
         pieChart.setCenterTextSize(13);
         pieChart.setTouchEnabled(false);
 
 
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
-        yValue.add(new PieEntry(34f, "DO"));
-        yValue.add(new PieEntry(34f, "Temp"));
-        yValue.add(new PieEntry(34f, "pH"));
-        yValue.add(new PieEntry(34f, "Alk"));
-        yValue.add(new PieEntry(34f, "TAN"));
-        yValue.add(new PieEntry(34f, "Nitrite"));
-        yValue.add(new PieEntry(34f, "Hardness"));
-        yValue.add(new PieEntry(34f, "Turb"));
+
+        Intent DOIndex = getIntent();
+        String DOstr = DOIndex.getStringExtra("DO1");
+        yValue.add(new PieEntry(34f, "DO\n" + DOstr + "\nmg/L"));
+
+        Intent TempIndex = getIntent();
+        String Tempstr = TempIndex.getStringExtra("Temp1");
+        yValue.add(new PieEntry(34f, "Temp\n" + Tempstr + "\nC"));
+
+        Intent pHIndex = getIntent();
+        String pHpstr = pHIndex.getStringExtra("pH1");
+        yValue.add(new PieEntry(34f, "pH\n" + pHpstr));
+
+        Intent AlkIndex = getIntent();
+        String Alkpstr = AlkIndex.getStringExtra("Alk1");
+        yValue.add(new PieEntry(34f, "Alk\n" + Alkpstr + "\nppm"));
+
+        Intent TANIndex = getIntent();
+        String TANpstr = TANIndex.getStringExtra("Ammo1");
+        yValue.add(new PieEntry(34f, "TAN\n" + TANpstr + "\nppm"));
 
 
+        Intent NitIndex = getIntent();
+        String Nitpstr = NitIndex.getStringExtra("Nit1");
+        yValue.add(new PieEntry(34f, "Nitrite\n" + Nitpstr + "\nppm"));
+
+        Intent HardIndex = getIntent();
+        String Hardpstr = HardIndex.getStringExtra("Hard1");
+        yValue.add(new PieEntry(34f, "Hard\n" + Hardpstr + "\nppm"));
+
+        Intent TurbIndex = getIntent();
+        String Turbstr = TurbIndex.getStringExtra("Turb1");
+        yValue.add(new PieEntry(34f, "Turb\n" + Turbstr + "\ncm"));
+
+        //ArrayList<PieEntry> xValue = new ArrayList<>();
+        //xValue.add(new PieEntry(34,DOstr+ "mg/L"));
+
+
+//        Set Description
         Description description = new Description();
         description.setText("");
         description.setTextSize(50);
@@ -124,6 +150,10 @@ public class PieChartActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+
+        final TextView FarmNameTextView = (TextView) findViewById(R.id.txtFarm);
+        final TextView PondTextView = (TextView) findViewById(R.id.txtPond);
+
 //        Set Header Text
 
         Intent FarmIndex = getIntent();
@@ -131,8 +161,12 @@ public class PieChartActivity extends AppCompatActivity {
         FarmNameTextView.setText(FNstr);
 
         Intent PondIndex = getIntent();
-        String Pondstr = FarmIndex.getStringExtra("Pond");
+        String Pondstr = PondIndex.getStringExtra("Pond");
         PondTextView.setText(Pondstr);
+
+
+        final TextView NH3TextView = (TextView) findViewById(R.id.txtNH3);
+        final TextView NH4TextView = (TextView) findViewById(R.id.txtNH4);
 
 
     }   //Main Method

@@ -40,16 +40,21 @@ public class Detail2Activity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-
-
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
-                intent.putExtra("Pond", PondEditText.getText().toString());
                 intent.putExtra("FarmName", FarmNameEditText.getText().toString());
+                intent.putExtra("Pond", PondEditText.getText().toString());
+                intent.putExtra("DO1", DOEditText.getText().toString());
+                intent.putExtra("Temp1", TempEditText.getText().toString());
+                intent.putExtra("pH1", pHEditText.getText().toString());
+                intent.putExtra("Alk1", AlkEditText.getText().toString());
+                intent.putExtra("Ammo1", AmmoEditText.getText().toString());
+                intent.putExtra("Nit1", NiteEditText.getText().toString());
+                intent.putExtra("Hard1", HardEditText.getText().toString());
+                intent.putExtra("Turb1", TurbEditText.getText().toString());
+
                 startActivity(intent);
             }
         });
