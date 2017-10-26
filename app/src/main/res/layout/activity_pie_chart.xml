@@ -142,6 +142,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:hint="______"
+            android:maxLength="4"
             android:textColor="@color/textcolorPrimaryDark"
             android:textSize="15dp" />
 
