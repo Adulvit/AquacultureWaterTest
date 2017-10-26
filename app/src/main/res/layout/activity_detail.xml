@@ -76,7 +76,6 @@
             android:id="@+id/linScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/margin1"
             android:layout_marginTop="@dimen/margin1"
             android:gravity="center_horizontal"
             android:orientation="vertical">
