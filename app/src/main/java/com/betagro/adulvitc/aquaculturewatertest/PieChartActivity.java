@@ -72,6 +72,7 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setDragDecelerationFrictionCoef(0.95f);
 
 
+
         pieChart.setDrawHoleEnabled(true);
         pieChart.setTransparentCircleRadius(55f);
         pieChart.setHoleColor(Color.WHITE);
@@ -79,6 +80,8 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setCenterText("developed by Adulvit\nTechnical Service Division\nBetagro Group");
         pieChart.setCenterTextSize(13);
         pieChart.setTouchEnabled(false);
+
+
 
 
 
@@ -107,7 +110,7 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.animateY(100, Easing.EasingOption.EaseInOutCubic);
 
         PieDataSet dataSet = new PieDataSet(yValue, "");
-        dataSet.setSliceSpace(3f);
+        dataSet.setSliceSpace(1f);
         dataSet.setSelectionShift(5f);
         dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
 
