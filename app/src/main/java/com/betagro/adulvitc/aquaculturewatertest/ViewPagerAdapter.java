@@ -20,7 +20,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     private Integer[] image = {R.drawable.do_meter,
             R.drawable.do_meter1, R.drawable.ph_measure,
             R.drawable.ph_measure2, R.drawable.water_temp,
-            R.drawable.alkaline};
+            R.drawable.alkaline,R.drawable.amo_cartoon,R.drawable.amo_cartoon2};
 
     public ViewPagerAdapter(Context context1) {
         this.context = context1;
