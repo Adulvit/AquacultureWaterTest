@@ -80,6 +80,43 @@ public class Detail2Activity extends AppCompatActivity {
                     ad.show();
                     return;
 
+/*
+//                    กรณีไม่มีชื่อฟาร์มและชื่อบ่อแต่มีค่าพารามิเตอร์ครบทุกตัวยกเว้น Temp
+                } else if ((FarmNameEditText.getText().length() == 0 || PondEditText.getText().length() == 0) &&
+                        ((DOEditText.getText().length() != 0) || (TempEditText.getText().length() == 0) ||
+                                (pHEditText.getText().length() != 0) || (AlkEditText.getText().length() != 0) ||
+                                (AmmoEditText.getText().length() != 0) || (NiteEditText.getText().length() != 0) ||
+                                (HardEditText.getText().length() != 0) || (TurbEditText.getText().length() != 0))) {
+
+                    ad.setTitle("Error! ");
+                    ad.setIcon(R.drawable.icon_question);
+                    ad.setNegativeButton("No", null);
+                    ad.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
+                            intent.putExtra("FarmName", FarmNameEditText.getText().toString());
+                            intent.putExtra("Pond", PondEditText.getText().toString());
+                            intent.putExtra("DO1", DOEditText.getText().toString());
+                            intent.putExtra("Temp1", TempEditText.getText().toString());
+                            intent.putExtra("Temp2", TempEditText.getText().toString());
+                            intent.putExtra("pH1", pHEditText.getText().toString());
+                            intent.putExtra("Alk1", AlkEditText.getText().toString());
+                            intent.putExtra("Ammo1", AmmoEditText.getText().toString());
+                            intent.putExtra("Nit1", NiteEditText.getText().toString());
+                            intent.putExtra("Hard1", HardEditText.getText().toString());
+                            intent.putExtra("Turb1", TurbEditText.getText().toString());
+                            startActivity(intent);
+                        }
+                    });
+
+                    ad.setMessage("คุณต้องกาารจะข้ามไปสู่หน้าสรุปโดยไม่ต้องกรอกชื่อฟาร์มหรือชื่อบ่อ ใช่หรือไม่");
+                    ad.show();
+                    return;
+
+                    */
+
+
 //                    กรณีกรอกชื่อฟาร์มหรือชื่อบ่อแต่ไม่กรอกค่าคุณภาพน้ำเลย
                 } else if ((FarmNameEditText.getText().length() != 0 || PondEditText.getText().length() != 0) &&
                         ((DOEditText.getText().length() == 0) && (TempEditText.getText().length() == 0) &&
@@ -131,7 +168,8 @@ public class Detail2Activity extends AppCompatActivity {
                         intent.putExtra("Turb1", TurbEditText.getText().toString());
                         startActivity(intent);
 
-                    }
+                }
+
 
             }
         });
