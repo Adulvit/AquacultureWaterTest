@@ -95,7 +95,6 @@ public class PieChartActivity extends AppCompatActivity {
         String TANpstr = TANIndex.getStringExtra("Ammo1");
         yValue.add(new PieEntry(34f, "TAN\n" + TANpstr + "\nppm"));
 
-
         Intent NitIndex = getIntent();
         String Nitpstr = NitIndex.getStringExtra("Nit1");
         yValue.add(new PieEntry(34f, "Nitrite\n" + Nitpstr + "\nppm"));
@@ -163,7 +162,6 @@ public class PieChartActivity extends AppCompatActivity {
         final TextView NH4TextView = (TextView) findViewById(R.id.txtNH4);
 
 
-
         Intent Temp2Index = getIntent();
         String Temp2str = Temp2Index.getStringExtra("Temp1");
 
@@ -179,7 +177,7 @@ public class PieChartActivity extends AppCompatActivity {
         double pH2Number = Double.parseDouble(pHpstr);
 
 
-//        pH 7.0 - 7.2 and Temp 16 - 34 C
+
         if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
             double NH3 = (0.29 * TAN2Number / 100);
             NH3TextView.setText(String.valueOf(NH3));
@@ -988,10 +986,10 @@ public class PieChartActivity extends AppCompatActivity {
             NH3TextView.setText(String.valueOf(NH3));
             double NH4 = Math.abs(TAN2Number - NH3);
             NH4TextView.setText(String.valueOf(NH4));
-        }else {
+        }/*else {
             NH3TextView.setText(String.valueOf(false));
             NH4TextView.setText(String.valueOf(false));
-        }
+        }*/
 
 
     }   //Main Method
