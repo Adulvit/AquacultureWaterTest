@@ -63,16 +63,15 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setUsePercentValues(false);
         pieChart.getDescription().setEnabled(false);
-        pieChart.setExtraOffsets(5, 10, 5, 5);
-
+        //pieChart.setExtraOffsets(5, 10, 5, 5);
         pieChart.setDragDecelerationFrictionCoef(0.95f);
-
 
         pieChart.setDrawHoleEnabled(true);
         pieChart.setTransparentCircleRadius(45f);
-        pieChart.setHoleColor(Color.WHITE);
+        pieChart.setHoleColor(Color.TRANSPARENT);
         pieChart.setHoleRadius(40);
-        pieChart.setCenterText("developed by Adulvit\nTechnical Service D.\nBetagro Group");
+
+        pieChart.setCenterText("");
         pieChart.setCenterTextSize(13);
         pieChart.setTouchEnabled(true);
 
@@ -113,13 +112,16 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
+
+
+
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
         yValue.add(new PieEntry(34f, "DO\n" + DOstr + "\nmg/L"));
-        yValue.add(new PieEntry(34f, "Temp\n" + Tempstr + "\nC"));
+        yValue.add(new PieEntry(34f, "Temp\n" + Tempstr  + "\nC"));
         yValue.add(new PieEntry(34f, "pH\n" + pHpstr));
         yValue.add(new PieEntry(34f, "Alk\n" + Alkpstr + "\nppm"));
-        yValue.add(new PieEntry(34f, "TAN\n" + TANpstr + "\nppm"));
+        yValue.add(new PieEntry(34f, "TAN\n" + TANpstr  + "\nppm"));
         yValue.add(new PieEntry(34f, "Nitrite\n" + Nitpstr + "\nppm"));
         yValue.add(new PieEntry(34f, "Hard\n" + Hardpstr + "\nppm"));
         yValue.add(new PieEntry(34f, "Turb\n" + Turbstr + "\ncm"));
@@ -127,8 +129,10 @@ public class PieChartActivity extends AppCompatActivity {
 
 //        Set Description
         Description description = new Description();
-        description.setText("");
-        description.setTextSize(50);
+        description.setText("developed by Adulvit, Betagro Group");
+        description.setTextSize(12);
+        description.setTextColor(Color.BLACK);
+
         pieChart.setDescription(description);
 
         pieChart.animateY(1500);
@@ -161,21 +165,11 @@ public class PieChartActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-
-//        Set Header Text
-
-
+/*
 
         Intent Temp2Index = getIntent();
-        String Temp2str = Temp2Index.getStringExtra("Temp1");
+        String Temp2str = Temp2Index.getStringExtra("Temp2");
 
-        Intent TAN2Index = getIntent();
-        String TAN2pstr = TAN2Index.getStringExtra("Ammo1");
-
-        Intent pH2Index = getIntent();
-        String pH2pstr = pH2Index.getStringExtra("pH1");
 
 
         double TAN2Number = Double.parseDouble(TANpstr);
@@ -185,9 +179,8 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 //        กรณีที่ 1 เมื่อค่า ( TAN != ค่าว่าง และ Temp != ค่าว่าง และ pH != ค่าว่าง) และ ( ค่า Temp 16 - 34 C และ ค่า pH  7.0 - 10.4 )
-        if ((TAN2Number != 0 && Temp2Number != 0 && pH2Number != 0) &&
-                (Temp2Number >= 16 && Temp2Number < 34) &&
-                (pH2Number >= 7.0 && pH2Number < 10.4))
+        if ((TANpstr != null && Tempstr != null && pHpstr != null) &&
+            (Temp2Number >= 16 && Temp2Number < 34) && (pH2Number >= 7.0 && pH2Number < 10.4))
 
         {
             if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
@@ -1000,16 +993,20 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
             }
 
-            /*
+
 
 //        กรณีที่ 2 เมื่อค่า ( TAN != ค่าว่าง และ Temp == ค่าว่าง และ pH != ค่าว่าง)
-        } else if ((TAN2Number != 0 && Temp2str.equals("")  && pH2Number != 0) && (pH2Number >= 7.0 && pH2Number < 10.4)) {
+        } else if ((TANpstr != null && Tempstr == null && pHpstr != null) && (pH2Number >= 7.0 && pH2Number < 10.4))
+
+
+        {
 
             if (pH2Number >= 7.0 && pH2Number < 7.2) {
                 double NH3 = (0.52 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
+
 
             } else if (pH2Number >= 7.2 && pH2Number < 7.4) {
                 double NH3 = (0.83 * TAN2Number / 100);
@@ -1108,21 +1105,12 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
             }
 
-
-        }
-
-        /*
-
-
-
-
-
-        /*else {
+        } else {
             NH3TextView.setText(String.valueOf(false));
             NH4TextView.setText(String.valueOf(false));
-        }*/
-
         }
+*/
+
 
     }   //Main Method
 
