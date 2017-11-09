@@ -26,14 +26,15 @@
         <activity
             android:name=".DetailActivity"
             android:label="Detail of Parameter"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".PieChartActivity"
             android:label="Water Quality Result"
-            android:parentActivityName=".Detail2Activity">
-        </activity>
+            android:parentActivityName=".Detail2Activity"></activity>
+        <activity android:name=".PieChart2Activity"
+            android:label="PieChart2"
 
+            ></activity>
     </application>
 
 </manifest>
