@@ -18,7 +18,8 @@ public class Detail2Activity extends AppCompatActivity {
     private EditText FarmNameEditText, PondEditText, DOEditText, TempEditText, pHEditText, AlkEditText,
             AmmoEditText, NiteEditText, HardEditText, TurbEditText;
     private Button nextButton;
-    private String farmnameString,pondString,TempString;
+    private String farmnameString,pondString,TempString,pHString, TANString;
+    private TextView NH3TextView, NH4TextView;
 
 
     @Override
@@ -46,9 +47,10 @@ public class Detail2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                TempString = TempEditText.getText().toString().trim();
+                //TempString = TempEditText.getText().toString().trim();
 
                 final AlertDialog.Builder ad = new AlertDialog.Builder(Detail2Activity.this);
+
 
 //                    กรณีไม่กรอกชื่อฟาร์มหรือชื่อบ่อ แต่กรอกค่าพารามิเตอร์อย่างน้อย 1 อย่าง
                 if ((FarmNameEditText.getText().length() == 0 || PondEditText.getText().length() == 0) &&
@@ -95,11 +97,16 @@ public class Detail2Activity extends AppCompatActivity {
                     return;
 
 
+
+
+//                ในกรณีที่ กรอกทุกค่า
                 } else if ((FarmNameEditText.getText().length() != 0 && PondEditText.getText().length() != 0) &&
                             ((DOEditText.getText().length() != 0) || (TempEditText.getText().length() != 0) ||
                                     (pHEditText.getText().length() != 0) || (AlkEditText.getText().length() != 0) ||
                                     (AmmoEditText.getText().length() != 0) || (NiteEditText.getText().length() != 0) ||
                                     (HardEditText.getText().length() != 0) || (TurbEditText.getText().length() != 0))) {
+
+
 
                         Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
                         intent.putExtra("FarmName", FarmNameEditText.getText().toString());
@@ -114,7 +121,9 @@ public class Detail2Activity extends AppCompatActivity {
                         intent.putExtra("Turb1", TurbEditText.getText().toString());
                         startActivity(intent);
 
+
                 }
+
 
 
             }

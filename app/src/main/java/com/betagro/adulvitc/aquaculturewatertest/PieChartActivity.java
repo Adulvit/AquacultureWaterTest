@@ -112,6 +112,16 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
+        Intent NH3Index = getIntent();
+        String NH3str = NH3Index.getStringExtra("NH3");
+        NH3TextView.setText(NH3str);
+
+        Intent NH4Index = getIntent();
+        String NH4str = NH4Index.getStringExtra("NH4");
+        NH4TextView.setText(NH4str);
+
+
+
 
 
 
@@ -165,13 +175,6 @@ public class PieChartActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-/*
-
-        Intent Temp2Index = getIntent();
-        String Temp2str = Temp2Index.getStringExtra("Temp2");
-
-
-
         double TAN2Number = Double.parseDouble(TANpstr);
         double Temp2Number = Double.parseDouble(Tempstr);
         double pH2Number = Double.parseDouble(pHpstr);
@@ -179,8 +182,9 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 //        กรณีที่ 1 เมื่อค่า ( TAN != ค่าว่าง และ Temp != ค่าว่าง และ pH != ค่าว่าง) และ ( ค่า Temp 16 - 34 C และ ค่า pH  7.0 - 10.4 )
-        if ((TANpstr != null && Tempstr != null && pHpstr != null) &&
-            (Temp2Number >= 16 && Temp2Number < 34) && (pH2Number >= 7.0 && pH2Number < 10.4))
+        if ((TANpstr != null && Tempstr != null && pHpstr != null ) && (DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null ) && (Temp2Number >= 16 && Temp2Number < 34) &&
+                (pH2Number >= 7.0 && pH2Number < 10.4))
 
         {
             if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
@@ -994,10 +998,10 @@ public class PieChartActivity extends AppCompatActivity {
             }
 
 
-
-//        กรณีที่ 2 เมื่อค่า ( TAN != ค่าว่าง และ Temp == ค่าว่าง และ pH != ค่าว่าง)
-        } else if ((TANpstr != null && Tempstr == null && pHpstr != null) && (pH2Number >= 7.0 && pH2Number < 10.4))
-
+/*
+//        กรณีที่ 4 เมื่อค่า ( TAN != ค่าว่าง และ Temp == ค่าว่าง และ pH != ค่าว่าง)  **เมื่อต้องกรอก Temp = 0 จึงจะมาเข้าเงื่อนไขนี้**
+        } else if ((TANpstr != null && Tempstr == null && pHpstr != null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null )&& (pH2Number >= 7.0 && pH2Number < 10.4))
 
         {
 
@@ -1105,11 +1109,54 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
             }
 
-        } else {
+
+/*
+//        กรณีที่ 2
+        } else if ((TANpstr == null && Tempstr != null && pHpstr != null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
             NH3TextView.setText(String.valueOf(false));
             NH4TextView.setText(String.valueOf(false));
+
+
+//         กรณีที่ 3
+        } else if ((TANpstr != null && Tempstr != null && pHpstr == null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
+            NH3TextView.setText(String.valueOf(false));
+            NH4TextView.setText(String.valueOf(false));
+
+//         กรณีที่ 5
+        }else if ((TANpstr == null && Tempstr != null && pHpstr == null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
+            NH3TextView.setText(String.valueOf(false));
+            NH4TextView.setText(String.valueOf(false));
+
+//        กรณีที่ 6
+        }else if ((TANpstr == null && Tempstr == null && pHpstr != null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
+            NH3TextView.setText(String.valueOf(false));
+            NH4TextView.setText(String.valueOf(false));
+
+
+//        กรณีที่ 7
+        }else if ((TANpstr != null && Tempstr == null && pHpstr == null || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
+            NH3TextView.setText(String.valueOf(false));
+            NH4TextView.setText(String.valueOf(false));
+
+
+//        กรณีที่ 8
+        }else if ((TAN2Number == 0 && Temp2Number == 0 && pH2Number == 0 || DOstr != null || Alkpstr != null ||Nitpstr != null ||
+                Hardpstr != null || Turbstr != null)) {
+            NH3TextView.setText(String.valueOf(false));
+            NH4TextView.setText(String.valueOf(false));
+
+
+            */
+
         }
-*/
+
+
+
 
 
     }   //Main Method
