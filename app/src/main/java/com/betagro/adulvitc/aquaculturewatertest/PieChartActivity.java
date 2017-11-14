@@ -5,14 +5,12 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -111,11 +109,6 @@ public class PieChartActivity extends AppCompatActivity {
         PondTextView.setText(Pondstr);
 
 
-
-
-
-
-
         ArrayList<PieEntry> yValue = new ArrayList<>();
 
         yValue.add(new PieEntry(34f, "DO\n" + DOstr + "\nmg/L"));
@@ -166,11 +159,9 @@ public class PieChartActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        double TAN2Number = Double.parseDouble(TANpstr);
-        double Temp2Number = Double.parseDouble(Tempstr);
-        double pH2Number = Double.parseDouble(pHpstr);
-
-
+        double TAN2Number = TANpstr != null && TANpstr.trim().length() > 0 ? Double.parseDouble(TANpstr) : 0;
+        double Temp2Number = Tempstr != null && Tempstr.trim().length() > 0 ? Double.parseDouble(Tempstr) : 25;
+        double pH2Number = pHpstr != null && pHpstr.trim().length() > 0 ? Double.parseDouble(pHpstr) : 0;
 
 
 //        กรณีที่ 1 เมื่อค่า ( TAN != ค่าว่าง และ Temp != ค่าว่าง และ pH != ค่าว่าง) และ ( ค่า Temp 16 - 34 C และ ค่า pH  7.0 - 10.4 )
@@ -1010,7 +1001,15 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
-            /*
+
+
+
+
+
+
+
+
+
 
         } else if ((TANpstr != null && Tempstr == null && pHpstr != null) && (DOstr != null || Alkpstr != null || Nitpstr != null ||
                 Hardpstr != null || Turbstr != null) && (Temp2Number >= 16 && Temp2Number < 34) &&
@@ -1826,7 +1825,7 @@ public class PieChartActivity extends AppCompatActivity {
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
             }
-*/
+
         }
 
         else {

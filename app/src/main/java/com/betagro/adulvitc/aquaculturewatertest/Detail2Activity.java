@@ -19,7 +19,6 @@ public class Detail2Activity extends AppCompatActivity {
             AmmoEditText, NiteEditText, HardEditText, TurbEditText;
     private Button nextButton;
     private String farmnameString, pondString, TempString, pHString, TANString;
-    private TextView NH3TextView, NH4TextView;
 
 
     @Override
@@ -97,7 +96,7 @@ public class Detail2Activity extends AppCompatActivity {
                         ad.show();
                         return;
 
-
+/*
 //                Normal Case Intent
                     } else if ((DOEditText.getText().length() != 0) || (TempEditText.getText().length() != 0) ||
                             (pHEditText.getText().length() != 0) || (AlkEditText.getText().length() != 0) ||
@@ -117,25 +116,25 @@ public class Detail2Activity extends AppCompatActivity {
                         intent.putExtra("Hard1", HardEditText.getText().toString());
                         intent.putExtra("Turb1", TurbEditText.getText().toString());
                         startActivity(intent);
-
+*/
 
 //                Temp not Input
-                    } else if ((TempEditText.getText().length() == 0) || (DOEditText.getText().length() != 0) ||
+                    } else if ((TempEditText.getText().length() != 0) || (DOEditText.getText().length() != 0) ||
                             (pHEditText.getText().length() != 0) || (AlkEditText.getText().length() != 0) ||
                             (AmmoEditText.getText().length() != 0) || (NiteEditText.getText().length() != 0) ||
                             (HardEditText.getText().length() != 0) || (TurbEditText.getText().length() != 0)) {
 
 
-                        String Tempstr = TempEditText.getText().toString();
-                        double TempNumber = Double.parseDouble(Tempstr);
-                        double Temp2Number = (TempNumber + 25);
+                        //String Tempstr = TempEditText.getText().toString();
+                        //double TempNumber = Tempstr != null && Tempstr.trim().length() > 0 ? Double.parseDouble(Tempstr) : 25;
+                        //double Temp2Number = (TempNumber + 25);
 
 
                         Intent intent = new Intent(Detail2Activity.this, PieChartActivity.class);
                         intent.putExtra("FarmName", FarmNameEditText.getText().toString());
                         intent.putExtra("Pond", PondEditText.getText().toString());
                         intent.putExtra("DO1", DOEditText.getText().toString());
-                        intent.putExtra("Temp1", Temp2Number);
+                        intent.putExtra("Temp1", TempEditText.getText().toString());
                         intent.putExtra("pH1", pHEditText.getText().toString());
                         intent.putExtra("Alk1", AlkEditText.getText().toString());
                         intent.putExtra("Ammo1", AmmoEditText.getText().toString());
