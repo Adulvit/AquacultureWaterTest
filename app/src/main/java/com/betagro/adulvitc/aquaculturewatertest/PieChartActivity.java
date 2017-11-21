@@ -61,7 +61,7 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setUsePercentValues(false);
         pieChart.getDescription().setEnabled(false);
-        //pieChart.setExtraOffsets(5, 10, 5, 5);
+        pieChart.setExtraOffsets(5, 5, 5, 5);
         pieChart.setDragDecelerationFrictionCoef(0.95f);
 
         pieChart.setDrawHoleEnabled(true);
@@ -71,7 +71,7 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setCenterText("");
         pieChart.setCenterTextSize(13);
-        pieChart.setTouchEnabled(true);
+        pieChart.setTouchEnabled(false);
 
 
 //        รับค่า String จากหน้า Detail2Activity มาเก็บไว้ในตัวแปร
@@ -1831,8 +1831,6 @@ public class PieChartActivity extends AppCompatActivity {
         else {
             NH3TextView.setText(String.valueOf(false));
             NH4TextView.setText(String.valueOf(false));
-
-
 
         }
 

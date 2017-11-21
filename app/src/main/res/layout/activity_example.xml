@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/backgroud21"
     android:padding="@dimen/margin1">
 
 
@@ -84,24 +84,45 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#b4000000">
+                android:background="#82ffffff">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-
-                    <TextView
-                        android:id="@+id/txtDetail"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="fill"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imvDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="320dp"
+                            android:layout_margin="10dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/do_details"
+                            android:text="Detail"
+                            android:textColor="@color/textcolorPrimaryDark"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/imvDetail2"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/do_details2"
+                        android:layout_height="250dp"
                         android:layout_margin="10dp"
-                        android:gravity="fill"
-                        android:text="Detail"
-                        android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="18sp" />
+                        android:scaleType="fitStart"
+                        />
+
+                    </LinearLayout>
 
                     <!--Button-->
                     <LinearLayout
@@ -138,5 +159,6 @@
 
 
 </ScrollView>
+
 
 
