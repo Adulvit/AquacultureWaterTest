@@ -91,7 +91,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-
+                    <!--Long Detail1-->
                     <TextView
                         android:id="@+id/txtDetail"
                         android:layout_width="match_parent"
@@ -100,6 +100,45 @@
                         android:layout_margin="10dp"
                         android:gravity="fill"
                         android:text="Detail"
+                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textSize="18sp" />
+
+
+                    <!--Image Detail1-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imgDetail1"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <!--Long Detail2-->
+                    <TextView
+                        android:id="@+id/txtDetail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_margin="10dp"
+                        android:gravity="fill"
+                        android:text="Detail2"
+                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <!--Image Detail2-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imgDetail2"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <!--Long Detail3-->
+                    <TextView
+                        android:id="@+id/txtDetail3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_margin="10dp"
+                        android:gravity="fill"
+                        android:text="Detail3"
                         android:textColor="@color/textcolorPrimaryDark"
                         android:textSize="18sp" />
 
