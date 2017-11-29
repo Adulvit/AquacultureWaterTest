@@ -41,6 +41,33 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.disk2
         };
 
+        final int[] detail1Ints = new int[]{
+                R.drawable.detail_do1,
+                R.drawable.detail_temp1,
+                R.drawable.detail_ph1,
+                R.drawable.detail_alk3,
+                R.drawable.detail_ammo1,
+                R.drawable.detail_ammo1,
+                R.drawable.detail_hard1,
+                R.drawable.detail_turb1,
+
+
+        };
+
+        final int[] detail2Ints = new int[]{
+                R.drawable.detail_do2,
+                R.drawable.detail_temp2,
+                R.drawable.detail_ph2,
+                R.drawable.detail_alk2,
+                R.drawable.detail_ammo4,
+                R.drawable.detail_ammo2,
+                R.drawable.detail_hard2,
+                R.drawable.detail_turb2,
+
+        };
+
+
+
 
         GridViewAdapter gridAdapter = new GridViewAdapter(this, imageInts);
         gridView.setAdapter(gridAdapter);
@@ -54,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("title", position);
                 intent.putExtra("Unit", position);
                 intent.putExtra("imgID", arrImg[position]);
+                intent.putExtra("detail1IMG", detail1Ints[position]);
+                intent.putExtra("detail2IMG", detail2Ints[position]);
                 intent.putExtra("longDetail", position);
+                intent.putExtra("longDetail2", position);
+                intent.putExtra("longDetail3", position);
                 intent.putExtra("subtitle", position);
 
                 startActivity(intent);

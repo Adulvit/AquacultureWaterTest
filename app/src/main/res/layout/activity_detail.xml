@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg2"
     android:padding="@dimen/margin1">
 
 
@@ -86,65 +86,101 @@
                 android:layout_height="match_parent"
                 android:background="#b4000000">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <!--Long Detail1-->
-                    <TextView
-                        android:id="@+id/txtDetail"
+                    <!--linear No.1-->
+                    <LinearLayout
+                        android:id="@+id/linDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="fill"
-                        android:layout_margin="10dp"
-                        android:gravity="fill"
-                        android:text="Detail"
-                        android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="18sp" />
+                        android:orientation="vertical">
+
+                        <!--Long Detail1-->
+                        <TextView
+                            android:id="@+id/txtDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="fill"
+                            android:layout_margin="10dp"
+                            android:gravity="fill"
+                            android:text="Detail"
+                            android:textColor="@color/textcolorPrimaryDark"
+                            android:textSize="18sp" />
 
 
-                    <!--Image Detail1-->
-                    <ImageView
+                        <!--Image Detail1-->
+                        <ImageView
+                            android:padding="5dp"
+                            android:id="@+id/imgDetail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher" />
+
+                    </LinearLayout>
+
+                    <!--linear No.2-->
+                    <LinearLayout
+                        android:id="@+id/linDetail2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/imgDetail1"
-                        android:src="@mipmap/ic_launcher" />
+                        android:layout_below="@+id/linDetail"
+                        android:orientation="vertical">
 
-                    <!--Long Detail2-->
-                    <TextView
-                        android:id="@+id/txtDetail2"
+                        <!--Long Detail2-->
+                        <TextView
+                            android:id="@+id/txtDetail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_margin="10dp"
+                            android:gravity="start"
+                            android:text="Detail2"
+                            android:textColor="@color/textcolorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <!--Image Detail2-->
+                        <ImageView
+                            android:padding="5dp"
+                            android:id="@+id/imgDetail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher" />
+
+                    </LinearLayout>
+
+                    <!--linear No.3-->
+                    <LinearLayout
+                        android:id="@+id/linDetail3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="fill"
-                        android:layout_margin="10dp"
-                        android:gravity="fill"
-                        android:text="Detail2"
-                        android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="18sp" />
+                        android:layout_below="@+id/linDetail2"
+                        android:orientation="vertical">
 
-                    <!--Image Detail2-->
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imgDetail2"
-                        android:src="@mipmap/ic_launcher" />
+                        <!--Long Detail3-->
+                        <TextView
+                            android:id="@+id/txtDetail3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="fill"
+                            android:layout_margin="10dp"
+                            android:gravity="fill"
+                            android:text="Detail3"
+                            android:textColor="@color/textcolorPrimaryDark"
+                            android:textSize="18sp" />
 
-                    <!--Long Detail3-->
-                    <TextView
-                        android:id="@+id/txtDetail3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="fill"
-                        android:layout_margin="10dp"
-                        android:gravity="fill"
-                        android:text="Detail3"
-                        android:textColor="@color/textcolorPrimaryDark"
-                        android:textSize="18sp" />
+
+
+                    </LinearLayout>
 
                     <!--Button-->
                     <LinearLayout
                         android:id="@+id/linBTN"
+                        android:layout_below="@+id/linDetail3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin1"
@@ -164,7 +200,7 @@
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </RelativeLayout>
 
 
             </ScrollView>
