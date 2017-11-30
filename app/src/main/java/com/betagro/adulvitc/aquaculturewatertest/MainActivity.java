@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.detail_ph2,
                 R.drawable.detail_alk2,
                 R.drawable.detail_ammo4,
-                R.drawable.detail_ammo2,
+                R.drawable.detail_nite1,
                 R.drawable.detail_hard2,
                 R.drawable.detail_turb2,
 
