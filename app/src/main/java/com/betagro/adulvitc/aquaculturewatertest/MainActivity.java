@@ -66,6 +66,19 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
+        final int[] detail3Ints = new int[]{
+                R.drawable.blank,
+                R.drawable.blank,
+                R.drawable.blank,
+                R.drawable.detail_alk12,
+                R.drawable.detail_ammo31,
+                R.drawable.blank,
+                R.drawable.blank,
+                R.drawable.blank,
+
+        };
+
+
 
 
 
@@ -83,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("imgID", arrImg[position]);
                 intent.putExtra("detail1IMG", detail1Ints[position]);
                 intent.putExtra("detail2IMG", detail2Ints[position]);
+                intent.putExtra("detail3IMG", detail3Ints[position]);
                 intent.putExtra("longDetail", position);
                 intent.putExtra("longDetail2", position);
                 intent.putExtra("longDetail3", position);

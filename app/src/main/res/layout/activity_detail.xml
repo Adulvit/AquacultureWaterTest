@@ -173,6 +173,15 @@
                             android:textColor="@color/textcolorPrimaryDark"
                             android:textSize="18sp" />
 
+                        <!--Image Detail3-->
+                        <ImageView
+                            android:padding="5dp"
+                            android:id="@+id/imgDetail3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher" />
+
 
 
                     </LinearLayout>

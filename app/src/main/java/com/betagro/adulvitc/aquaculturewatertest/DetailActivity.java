@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private ImageView innerImageView,detail1ImageView, detail12ImageView;
+    private ImageView innerImageView,detail1ImageView, detail12ImageView,detail13ImageView;
     private Button nextButton;
     private TextView titleTextView, subtitleTextView, detailTextView,detail2TextView;
 
@@ -22,6 +22,7 @@ public class DetailActivity extends AppCompatActivity {
         final ImageView innerImageView = (ImageView) findViewById(R.id.imgInner);
         final ImageView detail1ImageView = (ImageView) findViewById(R.id.imgDetail1);
         final ImageView detail2ImageView = (ImageView) findViewById(R.id.imgDetail2);
+        final ImageView detail3ImageView = (ImageView) findViewById(R.id.imgDetail3);
         final Button nextButton = (Button) findViewById(R.id.btnNext);
         final TextView titleTextView = (TextView) findViewById(R.id.txtTitle);
         final TextView subtitleTextView = (TextView) findViewById(R.id.txtSubTitle);
@@ -37,6 +38,9 @@ public class DetailActivity extends AppCompatActivity {
 
         final int detail2Ints = getIntent().getIntExtra("detail2IMG",R.drawable.detail_do2);
         detail2ImageView.setImageResource(detail2Ints);
+
+        final int detail3Ints = getIntent().getIntExtra("detail3IMG",R.drawable.detail_alk3);
+        detail3ImageView.setImageResource(detail3Ints);
 
 
         final int titleIndex = getIntent().getIntExtra("title", 0);
