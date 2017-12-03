@@ -40,7 +40,7 @@ public class Detail2Activity extends AppCompatActivity {
         final Button nextButton = (Button) findViewById(R.id.btnNext);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override

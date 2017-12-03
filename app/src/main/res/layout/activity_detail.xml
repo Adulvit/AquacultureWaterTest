@@ -15,26 +15,31 @@
         <LinearLayout
             android:id="@+id/linImg"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:orientation="vertical">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="#82ffffff">
 
                 <ImageView
                     android:id="@+id/imgInner"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="2dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
 
                     <TextView
@@ -45,7 +50,7 @@
                         android:layout_weight="1"
                         android:gravity="bottom"
                         android:text="Title"
-                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/h1"
                         android:textStyle="bold" />
 
@@ -57,7 +62,7 @@
                         android:layout_weight="1"
                         android:gravity="top"
                         android:text="SubTitle"
-                        android:textColor="@color/textcolorPrimaryDark"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/h2"
                         android:textStyle="bold" />
 
@@ -76,7 +81,7 @@
             android:id="@+id/linScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin1"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 

@@ -64,7 +64,7 @@ public class DetailActivity extends AppCompatActivity {
         subtitleTextView.setText(subtitleStrings[subtitle]);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override

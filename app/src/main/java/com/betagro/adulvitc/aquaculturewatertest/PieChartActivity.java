@@ -157,7 +157,7 @@ public class PieChartActivity extends AppCompatActivity {
         colors.add(Color.rgb(64, 64, 64));
         dataSet.setColors(colors);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         double TAN2Number = TANpstr != null && TANpstr.trim().length() > 0 ? Double.parseDouble(TANpstr) : 0;
         double Temp2Number = Tempstr != null && Tempstr.trim().length() > 0 ? Double.parseDouble(Tempstr) : 25;
