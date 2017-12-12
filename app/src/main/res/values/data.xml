@@ -3,7 +3,7 @@
 
     <string-array name="title">
         <item>Dissolved Oxygen</item>
-        <item>Temperature</item>
+        <item>Water Temperature</item>
         <item>pH</item>
         <item>Alkalinity</item>
         <item>Total Ammonia</item>

@@ -21,12 +21,9 @@
         <activity
             android:name=".Detail2Activity"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".DetailActivity" />
-        <activity
-            android:name=".PieChartActivity"
-             />
-
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".PieChartActivity" />
+        <activity android:name=".ExampleActivity"></activity>
     </application>
 
 </manifest>

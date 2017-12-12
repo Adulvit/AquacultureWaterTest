@@ -1,5 +1,6 @@
 package com.betagro.adulvitc.aquaculturewatertest;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
 
         final ImageView innerImageView = (ImageView) findViewById(R.id.imgInner);
         final ImageView detail1ImageView = (ImageView) findViewById(R.id.imgDetail1);
@@ -64,6 +66,7 @@ public class DetailActivity extends AppCompatActivity {
         subtitleTextView.setText(subtitleStrings[subtitle]);
 
 
+
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +84,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     }   //Main Method
+
 
 
 }   //Main Class
