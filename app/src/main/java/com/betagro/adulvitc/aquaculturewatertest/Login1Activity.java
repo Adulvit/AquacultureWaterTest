@@ -60,83 +60,21 @@ public class Login1Activity extends AppCompatActivity {
                     ad.setTitle("Have Space");
                     ad.setCancelable(false);
                     ad.setIcon(R.drawable.icon_alert);
-                    //ad.setNegativeButton("Close", null);
+                    ad.setNegativeButton("Close", null);
                     ad.setMessage("Please Fill All");
-                    ad.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    /*ad.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
 
                         }
-                    });
+                    }); */
                     ad.show();
                     return;
 
-
                 } else {
 //                  No Space
-                    try {
-
-                        boolean status = true;  // true ---> user False
-                        String truePasswordString = null,nameString = null;
-
-                        MyGetAllData myGetAllData = new MyGetAllData(getApplication());
-                        myGetAllData.execute("http://androidthai.in.th/sky/getAllDataAdulvitC.php");
-                        String jsonString = myGetAllData.get();
-
-                        Log.d("AdulvitC", "JSON" + jsonString);
-
-                        JSONArray jsonArray = new JSONArray(jsonString);
-                        for (int i=0; i<jsonArray.length(); i+=1) {
-
-                            JSONObject jsonObject = jsonArray.getJSONObject(i);
-                            if (userString.equals(jsonObject.getString("User"))) {
-                                status = false;
-                                truePasswordString = jsonObject.getString("Password");
-                                nameString = jsonObject.getString("Name");
-
-                            }
-
-                        }
-
-                        if (status) {
-                            ad.setTitle("User False");
-                            ad.setCancelable(false);
-                            ad.setIcon(R.drawable.icon_alert);
-                            ad.setNegativeButton("Close", null);
-                            ad.setMessage("No this User in my Database");
-                            ad.setPositiveButton("Close", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-
-                        } else if (passwordString.equals(truePasswordString)) {
-                            Toast.makeText(getApplication(), "Welcome" + nameString, Toast.LENGTH_SHORT);
-                        } else {
-                            ad.setTitle("Password False");
-                            ad.setCancelable(false);
-                            ad.setIcon(R.drawable.icon_alert);
-                            ad.setNegativeButton("Close", null);
-                            ad.setMessage("Please Try again Password False");
-                            ad.setPositiveButton("Close", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-
-                        }
-
-
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-
-
+                    checkUserAndPass();
 
                 }
 
@@ -152,6 +90,65 @@ public class Login1Activity extends AppCompatActivity {
 
     }// Main Method
 
+    private void checkUserAndPass() {
+
+        final AlertDialog.Builder ad1 = new AlertDialog.Builder(Login1Activity.this);
+
+        try {
+
+            boolean status = true;  // true ---> user False
+            String truePasswordString = null,nameString = null;
+
+            MyGetAllData myGetAllData = new MyGetAllData(getApplication());
+            myGetAllData.execute("http://androidthai.in.th/sky/getAllDataAdulvitC.php");
+            String jsonString = myGetAllData.get();
+
+            Log.d("AdulvitC", "JSON ==>" + jsonString);
+
+            JSONArray jsonArray = new JSONArray(jsonString);
+            for (int i=0; i<jsonArray.length(); i+=1) {
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                if (userString.equals(jsonObject.getString("User"))) {
+                    status = false;
+                    truePasswordString = jsonObject.getString("Password");
+                    nameString = jsonObject.getString("Name");
+                }
+            }
+            if (status) {
+                ad1.setTitle("User False");
+                ad1.setCancelable(false);
+                ad1.setIcon(R.drawable.icon_alert);
+                ad1.setNegativeButton("Close", null);
+                ad1.setMessage("No this User in my Database");
+                ad1.show();
+                return;
+
+
+            } else if (passwordString.equals(truePasswordString)) {
+                Toast.makeText(getApplication(), "Welcome" + nameString, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Login1Activity.this, MainActivity.class);
+                startActivity(intent);
+
+            } else {
+                ad1.setTitle("Password False");
+                ad1.setCancelable(false);
+                ad1.setIcon(R.drawable.icon_alert);
+                ad1.setNegativeButton("Close", null);
+                ad1.setMessage("Please Try again Password False");
+                ad1.show();
+                return;
+
+
+            }
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 }// Main Class
