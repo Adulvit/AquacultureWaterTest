@@ -123,7 +123,7 @@ public class PieChartActivity extends AppCompatActivity {
 
 //        Set Description
         Description description = new Description();
-        description.setText("developed by Adulvit, Betagro Group");
+        description.setText("developed by Adulvit");
         description.setTextSize(12);
         description.setTextColor(Color.BLACK);
 
