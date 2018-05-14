@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class PieChartActivity extends AppCompatActivity {
 
-
+    
     private TextView FarmNameTextView, PondTextView, NH3TextView, NH4TextView;
     private PieChart pieChart;
 
@@ -69,8 +69,9 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setHoleColor(Color.TRANSPARENT);
         pieChart.setHoleRadius(40);
 
-        pieChart.setCenterText("");
+        pieChart.setCenterText("developed by \nAdulvit\nBetagro Group");
         pieChart.setCenterTextSize(13);
+        pieChart.setCenterTextColor(Color.BLACK);
         pieChart.setTouchEnabled(false);
 
 
@@ -122,12 +123,15 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 //        Set Description
-        Description description = new Description();
+   /*     Description description = new Description();
         description.setText("developed by Adulvit");
         description.setTextSize(12);
         description.setTextColor(Color.BLACK);
+        //description.setPosition(400,400);
+
 
         pieChart.setDescription(description);
+        */
 
         pieChart.animateY(1500);
 
@@ -139,11 +143,13 @@ public class PieChartActivity extends AppCompatActivity {
         //dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
 
 
+
 //        Set Value in Other pie
         PieData data = new PieData(dataSet);
         data.setValueTextSize(0f);
         data.setValueTextColor(Color.YELLOW);
         pieChart.setData(data);
+
 
 
         ArrayList<Integer> colors = new ArrayList<>();
