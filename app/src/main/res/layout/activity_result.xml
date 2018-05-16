@@ -13,7 +13,8 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linHeader">
+        android:layout_below="@+id/linHeader"
+        >
 
         <android.support.design.widget.NavigationView
             android:layout_width="wrap_content"
@@ -22,15 +23,16 @@
             android:background="@color/textcolorPrimaryDark"
             app:itemIconTint="@color/darkgray"
             app:itemTextColor="@color/darkgray"
-            app:menu="@menu/drawermenu">
+            app:menu="@menu/drawermenu2">
 
         </android.support.design.widget.NavigationView>
 
-
+        <!--Scroll View-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -42,7 +44,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <!--Do Lin-->
+                    <!--DO Lin-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
@@ -63,7 +65,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -76,10 +78,10 @@
                                 android:orientation="horizontal">
                                 <!--Title Txt-->
                                 <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="center_horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
                                     android:text="@string/Dissolved_Oxygen"
                                     android:textColor="@color/black"
                                     android:textSize="14sp"
@@ -98,8 +100,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -109,7 +112,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
                                     android:text="@string/MgL"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -132,8 +136,8 @@
                                 android:id="@+id/DoResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -141,6 +145,7 @@
 
 
                     </LinearLayout>
+
 
                     <!--Temp Lin-->
                     <LinearLayout
@@ -163,7 +168,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -198,8 +203,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -209,7 +215,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
                                     android:text="C"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -232,8 +239,8 @@
                                 android:id="@+id/TempResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -264,7 +271,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -299,8 +306,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -310,7 +318,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:gravity="left"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -330,10 +339,11 @@
                             <!--Result-->
                             <TextView
                                 android:id="@+id/pHResult"
+                                android:gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -364,7 +374,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -399,8 +409,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -410,7 +421,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:gravity="left"
                                     android:text="@string/PPM"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -433,8 +445,8 @@
                                 android:id="@+id/AlkResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -465,7 +477,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -500,8 +512,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -511,7 +524,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
                                     android:text="@string/PPM"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -534,8 +548,8 @@
                                 android:id="@+id/TANResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -567,7 +581,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -602,8 +616,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -613,7 +628,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
                                     android:text="@string/PPM"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -636,8 +652,8 @@
                                 android:id="@+id/NitriteResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -668,7 +684,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -703,8 +719,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -714,7 +731,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
                                     android:text="@string/PPM"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
@@ -737,8 +755,8 @@
                                 android:id="@+id/HardResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -770,7 +788,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
@@ -805,8 +823,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
+                                    android:gravity="right"
                                     android:layout_weight="1"
-                                    android:textColor="@color/textcolorPrimaryDark"
+                                    android:textColor="@color/black"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -816,8 +835,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="@string/PPM"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="4dp"
+                                    android:text="@string/cm"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -839,8 +859,8 @@
                                 android:id="@+id/TurbResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/textcolorPrimaryDark"
-                                android:textSize="@dimen/h1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
 
@@ -848,7 +868,6 @@
 
 
                     </LinearLayout>
-
 
 
 
@@ -868,7 +887,7 @@
     <LinearLayout
         android:id="@+id/linHeader"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="60dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
