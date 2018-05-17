@@ -2,8 +2,13 @@ package com.betagro.adulvitc.aquaculturewatertest;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -16,19 +21,36 @@ import java.util.ArrayList;
 
 public class PieChartActivity extends AppCompatActivity {
 
-    
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+
     private TextView FarmNameTextView, PondTextView, NH3TextView, NH4TextView;
     private PieChart pieChart;
+
+    private ImageView ArrowImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
 
+    /*    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout,R.string.Open,R.string.Close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        */
+
+
+
         final TextView FarmNameTextView = (TextView) findViewById(R.id.txtFarm);
         final TextView PondTextView = (TextView) findViewById(R.id.txtPond);
         final TextView NH3TextView = (TextView) findViewById(R.id.txtNH3);
         final TextView NH4TextView = (TextView) findViewById(R.id.txtNH4);
+
+
+
 
 
         Thread t = new Thread() {
@@ -66,7 +88,7 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setDrawHoleEnabled(true);
         pieChart.setTransparentCircleRadius(45f);
-        pieChart.setHoleColor(Color.TRANSPARENT);
+        pieChart.setHoleColor(Color.WHITE);
         pieChart.setHoleRadius(40);
 
         pieChart.setCenterText("developed by \nAdulvit\nBetagro Group");
@@ -76,29 +98,29 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 //        รับค่า String จากหน้า Detail2Activity มาเก็บไว้ในตัวแปร
-        Intent DOIndex = getIntent();
-        String DOstr = DOIndex.getStringExtra("DO1");
+        final Intent DOIndex = getIntent();
+        final String DOstr = DOIndex.getStringExtra("DO1");
 
         Intent TempIndex = getIntent();
-        String Tempstr = TempIndex.getStringExtra("Temp1");
+        final String Tempstr = TempIndex.getStringExtra("Temp1");
 
         Intent pHIndex = getIntent();
-        String pHpstr = pHIndex.getStringExtra("pH1");
+        final String pHpstr = pHIndex.getStringExtra("pH1");
 
         Intent AlkIndex = getIntent();
-        String Alkpstr = AlkIndex.getStringExtra("Alk1");
+        final String Alkpstr = AlkIndex.getStringExtra("Alk1");
 
         Intent TANIndex = getIntent();
-        String TANpstr = TANIndex.getStringExtra("Ammo1");
+        final String TANpstr = TANIndex.getStringExtra("Ammo1");
 
         Intent NitIndex = getIntent();
-        String Nitpstr = NitIndex.getStringExtra("Nit1");
+        final String Nitpstr = NitIndex.getStringExtra("Nit1");
 
         Intent HardIndex = getIntent();
-        String Hardpstr = HardIndex.getStringExtra("Hard1");
+        final String Hardpstr = HardIndex.getStringExtra("Hard1");
 
         Intent TurbIndex = getIntent();
-        String Turbstr = TurbIndex.getStringExtra("Turb1");
+        final String Turbstr = TurbIndex.getStringExtra("Turb1");
 
         //รับค่า String FarmName และ Pond No. มาแสดงใน TextView
         Intent FarmIndex = getIntent();
@@ -108,6 +130,9 @@ public class PieChartActivity extends AppCompatActivity {
         Intent PondIndex = getIntent();
         String Pondstr = PondIndex.getStringExtra("Pond");
         PondTextView.setText(Pondstr);
+
+
+
 
 
         ArrayList<PieEntry> yValue = new ArrayList<>();
@@ -165,7 +190,7 @@ public class PieChartActivity extends AppCompatActivity {
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        double TAN2Number = TANpstr != null && TANpstr.trim().length() > 0 ? Double.parseDouble(TANpstr) : 0;
+        final double TAN2Number = TANpstr != null && TANpstr.trim().length() > 0 ? Double.parseDouble(TANpstr) : 0;
         double Temp2Number = Tempstr != null && Tempstr.trim().length() > 0 ? Double.parseDouble(Tempstr) : 25;
         double pH2Number = pHpstr != null && pHpstr.trim().length() > 0 ? Double.parseDouble(pHpstr) : 0;
 
@@ -178,6 +203,7 @@ public class PieChartActivity extends AppCompatActivity {
         {
             if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
                 double NH3 = (0.29 * TAN2Number / 100);
+
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
@@ -1016,13 +1042,12 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
-
+        // เงือนไขที่2 ไม่กรอกค่า Temp แต่กรอกค่า TAN & pH และ Temp 16 - 34 และ pH 7.0 - 10.4 ดึงค่าคงที่ Temp = 25 องศา
         } else if ((TANpstr != null && Tempstr == null && pHpstr != null) && (DOstr != null || Alkpstr != null || Nitpstr != null ||
-                Hardpstr != null || Turbstr != null) && (Temp2Number >= 16 && Temp2Number < 34) &&
-                (pH2Number >= 7.0 && pH2Number < 10.4))
+                Hardpstr != null || Turbstr != null) && (pH2Number >= 7.0 && pH2Number < 10.4))
 
         {
-            if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+            if (pH2Number >= 7.0 && pH2Number < 7.2) {
                 double NH3 = (0.29 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
@@ -1211,6 +1236,8 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
 
 
+
+
 //       pH 7.8 - 8.0 and Temp 16 - 34
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
                 double NH3 = (1.82 * TAN2Number / 100);
@@ -1257,6 +1284,8 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
+
+
 
 
 //       pH 8.0 - 8.2 and Temp 16 - 34
@@ -1307,6 +1336,8 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
 
 
+
+
 //       pH 8.2 - 8.4 and Temp 16 - 34
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
                 double NH3 = (4.45 * TAN2Number / 100);
@@ -1355,7 +1386,9 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
 
 
+
 //       pH 8.4 - 8.6 and Temp 16 - 34
+
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
                 double NH3 = (6.88 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
@@ -1403,7 +1436,10 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
 
 
+
+
 //       pH 8.6 - 8.8 and Temp 16 - 34
+
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
                 double NH3 = (10.48 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
@@ -1452,6 +1488,7 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 //       pH 8.8 - 9.0 and Temp 16 - 34
+
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
                 double NH3 = (15.66 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
@@ -1499,7 +1536,9 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.valueOf(NH4));
 
 
+
 //       pH 9.0 - 9.2 and Temp 16 - 34
+
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
                 double NH3 = (22.73 * TAN2Number / 100);
                 NH3TextView.setText(String.valueOf(NH3));
@@ -1593,6 +1632,8 @@ public class PieChartActivity extends AppCompatActivity {
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
 
+
+
 //       pH 9.4 - 9.6 and Temp 16 - 34
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
                 double NH3 = (42.49 * TAN2Number / 100);
@@ -1639,6 +1680,7 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
+
 
 
 //       pH 9.6 - 9.8 and Temp 16 - 34
@@ -1688,6 +1730,7 @@ public class PieChartActivity extends AppCompatActivity {
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
 
+
 //       pH 9.8 - 10.0 and Temp 16 - 34
             } else if ((Temp2Number >= 16 && Temp2Number < 18) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
                 double NH3 = (64.99 * TAN2Number / 100);
@@ -1734,6 +1777,8 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
+
+
 
 
 //       pH 10.0 - 10.2 and Temp 16 - 34
@@ -1830,19 +1875,219 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
-            }
 
+            }
         }
 
         else {
-            NH3TextView.setText(String.valueOf(false));
+            NH3TextView.setText(String.valueOf(0));
             NH4TextView.setText(String.valueOf(false));
 
         }
 
 
 
+        final ImageView ArrowImageView = (ImageView) findViewById(R.id.arrow_next);
+
+        ArrowImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PieChartActivity.this, ResultActivity.class);
+                intent.putExtra("DO", DOstr);
+                intent.putExtra("Temp", Tempstr);
+                intent.putExtra("pH", pHpstr);
+                intent.putExtra("Akl", Alkpstr);
+                intent.putExtra("NH3", NH3TextView.getText().toString() );
+                intent.putExtra("Nit", Nitpstr);
+                intent.putExtra("Hard", Hardpstr);
+                intent.putExtra("Turb", Turbstr);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
     }   //Main Method
 
+
+/*
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    */
+
+/*
+    } else if ((Temp2Number >= 34) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+        double NH3 = (4.00 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+        double NH3 = (1.57 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >=  34) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+        double NH3 = (6.22 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+        double NH3 = (2.50 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+        double NH3 = (9.52 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+        double NH3 = (3.80 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+        double NH3 = (14.26 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+        double NH3 = (5.97 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+        double NH3 = (20.94 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+        double NH3 = (9.13 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+        double NH3 = (29.50 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+        double NH3 = (13.77 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+        double NH3 = (39.90 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+        double NH3 = (20.20 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+        double NH3 = (51.31 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number  < 16) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+        double NH3 = (28.54 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >=  34) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+        double NH3 = (62.73 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+        double NH3 = (39.23 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+        double NH3 = (72.93 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+        double NH3 = (50.16 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >=  34) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+        double NH3 = (81.13 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16 ) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+        double NH3 = (61.42 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+        double NH3 = (87.09 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16 ) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+        double NH3 = (71.69 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+        double NH3 = (91.50 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number < 16 ) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+        double NH3 = (80.31 * TAN2Number / 100);
+        NH3TextView.setText(String.valueOf(NH3));
+        double NH4 = Math.abs(TAN2Number - NH3);
+        NH4TextView.setText(String.valueOf(NH4));
+
+        } else if ((Temp2Number >= 34) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (94.45 * TAN2Number / 100);
+                NH3TextView.setText(String.valueOf(NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.valueOf(NH4));
+            }
+
+        */
 
 }   //Main Class
