@@ -32,6 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
+
             >
 
             <ScrollView
@@ -42,6 +44,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:orientation="vertical">
 
                     <!--DO Lin-->
@@ -423,7 +426,7 @@
                                     android:layout_weight="1"
                                     android:layout_marginLeft="4dp"
                                     android:gravity="left"
-                                    android:text="@string/PPM"
+                                    android:text="@string/MgL"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -526,7 +529,7 @@
                                     android:layout_weight="1"
                                     android:gravity="left"
                                     android:layout_marginLeft="4dp"
-                                    android:text="@string/PPM"
+                                    android:text="@string/MgL"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -630,7 +633,7 @@
                                     android:layout_weight="1"
                                     android:gravity="left"
                                     android:layout_marginLeft="4dp"
-                                    android:text="@string/PPM"
+                                    android:text="@string/MgL"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -733,7 +736,7 @@
                                     android:layout_weight="1"
                                     android:gravity="left"
                                     android:layout_marginLeft="4dp"
-                                    android:text="@string/PPM"
+                                    android:text="@string/MgL"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -868,6 +871,21 @@
 
 
                     </LinearLayout>
+
+
+
+                    <!--Go to Recommend-->
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/Go_to_Recommend"
+                        android:textColor="@color/textcolorPrimaryDark" />
 
 
 
