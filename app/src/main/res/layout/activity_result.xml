@@ -44,7 +44,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:orientation="vertical">
 
                     <!--DO Lin-->
@@ -53,6 +52,7 @@
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
+                        android:layout_gravity=""
                         android:orientation="horizontal">
 
                         <!--Icon-->
@@ -63,6 +63,8 @@
                             android:src="@drawable/do4">
 
                         </ImageView>
+
+
 
                         <!--Lin Title-->
                         <LinearLayout
@@ -131,12 +133,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
                             <TextView
                                 android:id="@+id/DoResult"
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -234,7 +236,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
@@ -242,6 +243,7 @@
                                 android:id="@+id/TempResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -336,13 +338,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
                             <TextView
                                 android:id="@+id/pHResult"
                                 android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -440,12 +442,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
                             <TextView
                                 android:id="@+id/AlkResult"
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -543,7 +545,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
@@ -551,6 +552,7 @@
                                 android:id="@+id/TANResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -647,7 +649,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
@@ -655,6 +656,7 @@
                                 android:id="@+id/NitriteResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -750,7 +752,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
@@ -758,6 +759,7 @@
                                 android:id="@+id/HardResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -854,7 +856,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:padding="@dimen/margin1">
 
                             <!--Result-->
@@ -862,6 +863,7 @@
                                 android:id="@+id/TurbResult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
