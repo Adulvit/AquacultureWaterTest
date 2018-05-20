@@ -1002,7 +1002,7 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
-            } else if ((pH2Number < 7.0) && (Temp2Number < 16 )){
+            } else if ((pH2Number < 7.0) && (Temp2Number < 16)) {
                 NH3TextView.setText(String.valueOf(0));
                 NH4TextView.setText(String.valueOf(0));
             } else if ((pH2Number >= 10.4) && (Temp2Number >= 34)) {
@@ -1125,14 +1125,26 @@ public class PieChartActivity extends AppCompatActivity {
                 NH3TextView.setText(String.valueOf(NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.valueOf(NH4));
-            } else if (pH2Number < 6.0) {
+            }
+
+
+            // เงือนไขที่3 ไม่กรอกค่า Temp แต่กรอกค่า TAN & pH และ Temp < 16  และ >= 10.4 ดึงค่าคงที่ Temp = 25 องศา
+        } else if ((TANpstr != null && Tempstr == null && pHpstr != null) && (DOstr != null || Alkpstr != null || Nitpstr != null ||
+                Hardpstr != null || Turbstr != null) && (pH2Number < 6.0 & pH2Number >= 10.4 )) {
+
+            if (pH2Number < 6.0) {
                 NH3TextView.setText(String.valueOf(0));
                 NH4TextView.setText(String.valueOf(0));
             } else if (pH2Number >= 10.4) {
                 NH3TextView.setText(String.valueOf(null));
                 NH4TextView.setText(String.valueOf(null));
             }
+
+
         }
+
+
+
 
 
         final ImageView ArrowImageView = (ImageView) findViewById(R.id.arrow_next);
@@ -1140,7 +1152,8 @@ public class PieChartActivity extends AppCompatActivity {
         ArrowImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PieChartActivity.this, ResultActivity.class);{
+                Intent intent = new Intent(PieChartActivity.this, ResultActivity.class);
+                {
 
                     intent.putExtra("DO", DOstr);
                     intent.putExtra("Temp", Tempstr);
@@ -1153,7 +1166,6 @@ public class PieChartActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 }
-
 
 
             }
