@@ -13,17 +13,17 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linHeader"
-        >
+        android:layout_below="@+id/linHeader">
 
         <android.support.design.widget.NavigationView
             android:layout_width="wrap_content"
+            android:id="@+id/navigation_view"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@color/textcolorPrimaryDark"
             app:itemIconTint="@color/darkgray"
             app:itemTextColor="@color/darkgray"
-            app:menu="@menu/drawermenu2">
+            app:menu="@menu/drawermenu">
 
         </android.support.design.widget.NavigationView>
 
@@ -46,13 +46,13 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+
                     <!--DO Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
-                        android:layout_gravity=""
                         android:orientation="horizontal">
 
                         <!--Icon-->
@@ -65,96 +65,133 @@
                         </ImageView>
 
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
-
-
-                            <!--Title Lin-->
+                            <!--DO Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Dissolved_Oxygen"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueDo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/MgL"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/DoResult"
-                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_gravity=""
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Dissolved_Oxygen"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueDo"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/DoResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/DoRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
+
                     <!--Temp Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -169,95 +206,133 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--DO Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Temperature"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueTemp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="C"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/TempResult"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Temperature"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueTemp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/C"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/TempResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/TempRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
+
                     <!--pH Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -272,95 +347,132 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--pH Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/pH"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValuepH"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:layout_marginLeft="4dp"
-                                    android:gravity="left"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/pHResult"
-                                android:gravity="center_vertical"
-                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/pH"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValuepH"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/pHResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/pHRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
+
                     <!--Alk Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -375,95 +487,132 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--Alk Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Alkalinity"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueAlk"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:layout_marginLeft="4dp"
-                                    android:gravity="left"
-                                    android:text="@string/MgL"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/AlkResult"
-                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Alkalinity"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueAlk"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/AlkResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/AlkRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
-                    <!--TAN Lin-->
+                    <!--NH3 Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -478,88 +627,125 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--Alk Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Total_Ammonia"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueTAN"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/MgL"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/TANResult"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Total_Ammonia"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueTAN"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/TANResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/NH3Recommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
@@ -567,7 +753,7 @@
 
                     <!--Nitrite Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -582,95 +768,133 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--Alk Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Nitrite"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueNit"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/MgL"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/NitriteResult"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Nitrite"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueNit"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/NitriteResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/NitRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
+
                     <!--Hardness Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -685,96 +909,132 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--Alk Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Hardness"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueHard"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/MgL"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/HardResult"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Hardness"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueHard"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/HardResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/HardRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
-
-                    <!--Turb Lin-->
+                    <!--Turbidity Lin-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
@@ -789,105 +1049,132 @@
 
                         </ImageView>
 
-                        <!--Lin Title-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.25"
-                            android:orientation="vertical"
-                            android:padding="@dimen/margin1">
 
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                            <!--Title Lin-->
+                            <!--Alk Lin-->
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Title Txt-->
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/Turbidity"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <!--Value&Unit Lin-->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-                                <!--Value Txt-->
-                                <TextView
-                                    android:id="@+id/ValueTurb"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="right"
-                                    android:layout_weight="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <!--Unit Txt-->
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_weight="1"
-                                    android:gravity="left"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/cm"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <!--Lin Result-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="@dimen/margin1">
-
-                            <!--Result-->
-                            <TextView
-                                android:id="@+id/TurbResult"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:layout_height="100dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#ffffff"
+                                android:orientation="horizontal">
 
 
-                        </LinearLayout>
+                                <!--Lin Title-->
+                                <LinearLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin1">
 
+
+                                    <!--Title Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Title Txt-->
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/Turbidity"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <!--Value&Unit Lin-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+                                        <!--Value Txt-->
+                                        <TextView
+                                            android:id="@+id/ValueTurb"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <!--Unit Txt-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            android:text="@string/MgL"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <!--Lin Result-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/TurbResult"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <!--Lin Recommend-->
+                                <LinearLayout
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/margin1">
+
+                                    <!--Result-->
+                                    <TextView
+                                        android:id="@+id/TurbRecommend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="@string/Recommend"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
 
                     </LinearLayout>
 
 
 
-                    <!--Go to Recommend-->
-                    <Button
-                        android:id="@+id/btnNext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/Go_to_Recommend"
-                        android:textColor="@color/textcolorPrimaryDark" />
+
+
 
 
 
