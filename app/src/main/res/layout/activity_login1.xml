@@ -7,6 +7,7 @@
 
     <!--Content-->
     <LinearLayout
+        android:id="@+id/MainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -24,14 +25,14 @@
 
             android:layout_width="@dimen/icon"
             android:layout_height="@dimen/icon"
-            android:src="@drawable/do_icon" />
+            android:src="@drawable/icon_logo" />
 
         <!--Title-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Aquculture Water Test"
+            android:text="Water Quality Aqua"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/h1"
             android:textStyle="bold" />
@@ -46,16 +47,17 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_user"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_account"
 
                 />
 
             <EditText
-                android:id="@+id/etUsername"
+                android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:hint="User :"
+                android:hint="User Name :"
                 android:inputType="text"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimary" />
@@ -73,12 +75,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_password"
+                android:src="@drawable/ic_action_password"
 
                 />
 
             <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/edtPassword"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -90,30 +93,50 @@
 
         </LinearLayout>
 
+
+        <!--Button-->
+        <Button
+            android:id="@+id/bSignIn"
+            android:layout_marginBottom="@dimen/margin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/Login"
+            android:textColor="@color/textcolorPrimaryDark" />
+
+
         <!--New Resgister-->
 
         <TextView
+            android:clickable="true"
             android:id="@+id/tvRegisterLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Register"
+            android:text="@string/New_Register"
+            android:layout_marginTop="5dp"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <!--About Me-->
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/aboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/About_Me"
+            android:layout_marginTop="@dimen/margin1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
 
     </LinearLayout>
 
-    <!--Button-->
-    <Button
-        android:id="@+id/bSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/margin"
-        android:background="@color/colorPrimaryDark"
-        android:text="Login"
-        android:textColor="@color/textcolorPrimaryDark" />
+
+
+
 
 </RelativeLayout>
 
