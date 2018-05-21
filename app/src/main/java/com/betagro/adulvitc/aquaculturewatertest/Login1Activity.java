@@ -20,7 +20,7 @@ import org.json.JSONObject;
 public class Login1Activity extends AppCompatActivity {
 
     private EditText userEditText, passEditText;
-    private TextView registryTextView;
+    private TextView aboutMeTextView,registryTextView;
     private Button loginButton;
     private String userString, passwordString;
 
@@ -30,6 +30,7 @@ public class Login1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login1);
 
 
+        TextView aboutMeTextView = (TextView) findViewById(R.id.aboutMe);
         TextView registryTextView = (TextView) findViewById(R.id.tvRegisterLink);
         Button loginButton = (Button) findViewById(R.id.bSignIn);
 
@@ -39,6 +40,14 @@ public class Login1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login1Activity.this, RegistryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        aboutMeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login1Activity.this, MyProFileActivity.class);
                 startActivity(intent);
             }
         });
@@ -126,7 +135,7 @@ public class Login1Activity extends AppCompatActivity {
 
 
             } else if (passwordString.equals(truePasswordString)) {
-                Toast.makeText(getApplication(), "Welcome" + nameString, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(), "Welcome  " + nameString, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Login1Activity.this, MainActivity.class);
                 startActivity(intent);
 
