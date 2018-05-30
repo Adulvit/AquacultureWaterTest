@@ -1513,7 +1513,7 @@ public class PieChartActivity extends AppCompatActivity {
         if ((TANpstr != null && Tempstr != null && pHpstr != null) && (DOstr != null || Alkpstr != null || Nitpstr != null ||
                 Hardpstr != null || Turbstr != null)) {
 
-            // 1.1 Temp > 0 - <=2 และ pH < 9.2
+//           1.1 Temp > 0 - <=2 และ pH < 9.2
 
             if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number < 9.2)) {
                 double NH3 = (0.00 * TAN2Number / 100);
@@ -1521,25 +1521,767 @@ public class PieChartActivity extends AppCompatActivity {
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
 
-                // 1.2 Temp > 0 - <=2 และ pH >= 9.2 - < 11.00
+//           1.2 Temp > 0 - <=2 และ pH >= 9.2 - < 11.00
             } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
                 double NH3 = (4.01 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
+            }else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (15.46 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (30.10 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (45.74 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (60.17 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (72.05 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (77.49 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (93.43 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 0 && Temp2Number <= 2.0) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           1.3 Temp > 0 - <=2 และ pH > 11.0
+            } else if ((Temp2Number > 0 && Temp2Number <= 2) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
             }
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+
+//           2.1 Temp > 2 - <=4 และ pH  < 8.8
+
+            if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number < 8.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           2.2 Temp > 2 - <=4 และ pH >= 8.8 - < 11.0
+
+
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (0.06 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (7.47 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (18.89 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (33.18 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (48.28 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (62.10 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (73.44 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (79.50 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (95.58 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           2.3 Temp > 2 - <=4 และ pH > 11.0
+            } else if ((Temp2Number > 2 && Temp2Number <= 4) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+
+//           3.1 Temp > 4 - <=6 และ pH  < 8.8
+
+            if ((Temp2Number > 4 && Temp2Number <= 8) && (pH2Number < 8.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           3.2 Temp > 4 - <=6 และ pH >= 8.8 - < 11.0
+
+
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (3.22 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (10.93 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (22.32 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (36.27 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (50.82 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (64.04 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (74.83 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (81.52 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (94.51 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           3.3 Temp > 4 - <=6 และ pH > 11.0
+            } else if ((Temp2Number > 4 && Temp2Number <= 6) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+
+//           4.1 Temp > 6 - <=8 และ pH  < 8.8
+
+            if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number < 8.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           4.2 Temp > 6 - <=8 และ pH >= 8.8 - < 11.0
+
+
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (1.72 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (6.39 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (14.40 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (25.76 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (39.35 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (53.35 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (65.97 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (76.23 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (86.28 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (97.59 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           4.3 Temp > 6 - <=8 และ pH > 11.0
+            } else if ((Temp2Number > 6 && Temp2Number <= 8) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//-------------------------------------------------------------------------------------------------------------------------//
+
+
+//           5.1 Temp > 8 - <=10 และ pH  < 8.4
+
+            if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number < 8.4)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           5.2 Temp > 8 - <=10 และ pH >= 8.4 - < 11.0
+
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (0.32 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (1.58 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (4.36 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (9.55 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (17.86 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (29.19 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (42.44 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (55.89 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (67.90 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (77.62 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (81.59 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (90.85 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           5.3 Temp > 8 - <=10 และ pH > 11.0
+            } else if ((Temp2Number > 8 && Temp2Number <= 10) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//-------------------------------------------------------------------------------------------------------------------------//
+
+
+//           6.1 Temp > 10 - <=12 และ pH  < 7.0
+
+            if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number < 7.0)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           6.2 Temp > 10 - <=12 และ pH >= 7.0 - < 11.0
+
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+                double NH3 = (0.02 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.2 && pH2Number < 7.4)) {
+                double NH3 = (0.05 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.4 && pH2Number < 7.6)) {
+                double NH3 = (0.06 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+                double NH3 = (0.12 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+                double NH3 = (0.23 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+                double NH3 = (0.44 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+                double NH3 = (0.88 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (1.79 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (3.62 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (7.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (12.72 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (21.32 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (32.62 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (45.53 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (58.42 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (69.84 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (79.01 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (87.15 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (97.24 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.8 && pH2Number < 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           6.3 Temp > 10 - <=12 และ pH > 11.0
+            } else if ((Temp2Number > 10 && Temp2Number <= 14) && (pH2Number >= 11.0)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//-------------------------------------------------------------------------------------------------------------------------//
+
+
+//           7.1 Temp > 12 - <=14 และ pH  < 6.8
+            if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number < 6.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           7.2 Temp > 12 - <=14 และ pH >= 6.8 - < 10.8
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
+                double NH3 = (0.02 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+                double NH3 = (0.10 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.2 && pH2Number < 7.4)) {
+                double NH3 = (0.17 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.4 && pH2Number < 7.6)) {
+                double NH3 = (0.24 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+                double NH3 = (0.41 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+                double NH3 = (0.67 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+                double NH3 = (1.13 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+                double NH3 = (1.91 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (3.28 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (5.65 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (9.64 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (15.88 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (24.78 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (36.05 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (48.61 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (60.95 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (71.77 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (80.40 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (91.50 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           7.3 Temp > 12 - <=14 และ pH > 10.8
+            } else if ((Temp2Number > 12 && Temp2Number <= 14) && (pH2Number >= 10.8)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------//
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------//
+
+
+//           8.1 Temp > 14 - <=16 และ pH  < 6.8
+            if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number < 6.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           8.2 Temp > 14 - <=16 และ pH >= 6.8 - < 10.8
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
+                double NH3 = (0.03 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+                double NH3 = (0.17 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 7.2 && pH2Number < 7.4)) {
+                double NH3 = (0.29 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 7.4 && pH2Number < 7.6)) {
+                double NH3 = (0.43 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+                double NH3 = (0.70 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+                double NH3 = (1.13 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+                double NH3 = (1.82 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+                double NH3 = (2.94 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (4.76 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (7.69 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (12.28 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (19.05 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (28.24 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (39.48 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (51.69 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (63.49 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (73.70 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (81.79 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (93.24 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 10.6 && pH2Number < 10.8)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+//           8.3 Temp > 14 - <=16 และ pH > 10.8
+            } else if ((Temp2Number > 14 && Temp2Number <= 16) && (pH2Number >= 10.8)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------//
+
 
 //------------------------------------------------------------------------------------------------------------------------//
 
 
-//           10.1 Temp > 16 - <=18 และ pH  < 6.8
+//           9.1 Temp > 16 - <=18 และ pH  < 6.8
             if ((Temp2Number > 16 && Temp2Number <= 18) && (pH2Number < 6.8)) {
                 double NH3 = (0.00 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
 
-//           10.2 Temp > 16 - <=18 และ pH >= 6.8 - < 10.8
+//           9.2 Temp > 16 - <=18 และ pH >= 6.8 - < 10.8
             } else if ((Temp2Number > 16 && Temp2Number <= 18) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
                 double NH3 = (0.05 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1642,7 +2384,7 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.format("%.2f", NH4));
 
 
-//           10.3 Temp > 16 - <=18 และ pH > 10.8
+//           9.3 Temp > 16 - <=18 และ pH > 10.8
             } else if ((Temp2Number > 16 && Temp2Number <= 18) && (pH2Number >= 10.8)) {
                 double NH3 = (100 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1657,14 +2399,14 @@ public class PieChartActivity extends AppCompatActivity {
 
 
 
-//            11.1 Temp > 18 - <=20 และ pH  < 6.8
+//            10.1 Temp > 18 - <=20 และ pH  < 6.8
             if ((Temp2Number > 18 && Temp2Number <= 20) && (pH2Number < 6.8)) {
                 double NH3 = (0.00 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
 
-//           11.2 Temp > 18 - <=20 และ pH >= 6.8 - < 10.8
+//           10.2 Temp > 18 - <=20 และ pH >= 6.8 - < 10.8
             } else if ((Temp2Number > 18 && Temp2Number <= 20) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
                 double NH3 = (0.07 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1767,7 +2509,7 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.format("%.2f", NH4));
 
 
-//           11.3 Temp > 18 - <=20 และ pH > 10.8
+//           10.3 Temp > 18 - <=20 และ pH > 10.8
             } else if ((Temp2Number > 18 && Temp2Number <= 20) && (pH2Number >= 10.8)) {
                 double NH3 = (100 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1780,14 +2522,14 @@ public class PieChartActivity extends AppCompatActivity {
 
 //-------------------------------------------------------------------------------------------------------------//
 
-//           12.1 Temp > 20 - <=22 และ pH  < 6.8
+//           11.1 Temp > 20 - <=22 และ pH  < 6.8
             if ((Temp2Number > 20 && Temp2Number <= 22) && (pH2Number < 6.8)) {
                 double NH3 = (0.00 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
 
-//           12.2 Temp > 20 - <=22 และ pH >= 6.8 - < 10.8
+//           11.2 Temp > 20 - <=22 และ pH >= 6.8 - < 10.8
             } else if ((Temp2Number > 20 && Temp2Number <= 22) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
                 double NH3 = (0.07 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1890,7 +2632,7 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.format("%.2f", NH4));
 
 
-//           12.3 Temp > 20 - <=22 และ pH > 10.8
+//           11.3 Temp > 20 - <=22 และ pH > 10.8
             } else if ((Temp2Number > 20 && Temp2Number <= 22) && (pH2Number >= 10.8)) {
                 double NH3 = (100 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -1898,16 +2640,16 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.format("%.2f", NH4));
             }
 
+//----------------------------------------------------------------------------------------------------------------------------//
 
-
-//           13.1 Temp > 22 - <=24 และ pH  < 6.8
+//           12.1 Temp > 22 - <=24 และ pH  < 6.8
             if ((Temp2Number > 22 && Temp2Number <= 24) && (pH2Number < 6.8)) {
                 double NH3 = (0.00 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
 
-//           13.2 Temp > 24 - <=26 และ pH >= 6.8 - < 10.8
+//           12.2 Temp > 22 - <=264 และ pH >= 6.8 - < 10.8
             } else if ((Temp2Number > 22 && Temp2Number <= 24) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
                 double NH3 = (0.13 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
@@ -2010,13 +2752,249 @@ public class PieChartActivity extends AppCompatActivity {
                 NH4TextView.setText(String.format("%.2f", NH4));
 
 
-//           13.3 Temp > 22 - <=24 และ pH > 10.8
+//           12.3 Temp > 22 - <=24 และ pH >= 10.8
             } else if ((Temp2Number > 22 && Temp2Number <= 24) && (pH2Number >= 10.8)) {
                 double NH3 = (100 * TAN2Number / 100);
                 NH3TextView.setText(String.format("%.2f", NH3));
                 double NH4 = Math.abs(TAN2Number - NH3);
                 NH4TextView.setText(String.format("%.2f", NH4));
             }
+
+//-----------------------------------------------------------------------------------------------------------------------------//
+
+//            13.1 Temp > 24 - <=26 และ pH  < 6.8
+
+            if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number < 6.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           13.2 Temp > 24 - <=26 และ pH >= 6.8 - < 10.6
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
+                double NH3 = (0.10 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+                double NH3 = (0.52 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 7.2 && pH2Number < 7.4)) {
+                double NH3 = (0.83 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 7.4 && pH2Number < 7.6)) {
+                double NH3 = (1.31 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+                double NH3 = (2.06 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+                double NH3 = (3.22 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+                double NH3 = (5.02 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+                double NH3 = (7.72 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (11.71 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (17.37 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (25.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (34.56 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (45.57 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (57.02 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (67.77 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (76.92 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (84.08 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (89.33 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+
+//           13.3 Temp > 24 - <=26 และ pH >= 10.6
+            } else if ((Temp2Number > 24 && Temp2Number <= 26) && (pH2Number >= 10.6)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//--------------------------------------------------------------------------------------------------------------------------------//
+
+//           14.1 Temp > 26 - <=28 และ pH  < 6.8
+
+            if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number < 6.8)) {
+                double NH3 = (0.00 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+//           14.2 Temp > 26 - <=28 และ pH >= 6.8 - < 10.6
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 6.8 && pH2Number < 7.0)) {
+                double NH3 = (0.12 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 7.0 && pH2Number < 7.2)) {
+                double NH3 = (0.60 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 7.2 && pH2Number < 7.4)) {
+                double NH3 = (0.96 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 7.4 && pH2Number < 7.6)) {
+                double NH3 = (1.50 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 7.6 && pH2Number < 7.8)) {
+                double NH3 = (2.36 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 7.8 && pH2Number < 8.0)) {
+                double NH3 = (3.7 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 8.0 && pH2Number < 8.2)) {
+                double NH3 = (5.74 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 8.2 && pH2Number < 8.4)) {
+                double NH3 = (8.80 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 8.4 && pH2Number < 8.6)) {
+                double NH3 = (13.26 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 8.6 && pH2Number < 8.8)) {
+                double NH3 = (19.50 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 8.8 && pH2Number < 9.0)) {
+                double NH3 = (27.74 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 9.0 && pH2Number < 9.2)) {
+                double NH3 = (37.83 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 9.2 && pH2Number < 9.4)) {
+                double NH3 = (49.09 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 9.4 && pH2Number < 9.6)) {
+                double NH3 = (60.45 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 9.6 && pH2Number < 9.8)) {
+                double NH3 = (70.78 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 9.8 && pH2Number < 10.0)) {
+                double NH3 = (79.33 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 10.0 && pH2Number < 10.2)) {
+                double NH3 = (85.88 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 10.2 && pH2Number < 10.4)) {
+                double NH3 = (90.6 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 10.4 && pH2Number < 10.6)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+
+
+
+//           14.3 Temp > 26 - <=28 และ pH >= 10.6
+            } else if ((Temp2Number > 26 && Temp2Number <= 28) && (pH2Number >= 10.6)) {
+                double NH3 = (100 * TAN2Number / 100);
+                NH3TextView.setText(String.format("%.2f", NH3));
+                double NH4 = Math.abs(TAN2Number - NH3);
+                NH4TextView.setText(String.format("%.2f", NH4));
+            }
+
+//--------------------------------------------------------------------------------------------------------------------------------//
 
 
 
