@@ -20,7 +20,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-
         final ImageView innerImageView = (ImageView) findViewById(R.id.imgInner);
         final ImageView detail1ImageView = (ImageView) findViewById(R.id.imgDetail1);
         final ImageView detail2ImageView = (ImageView) findViewById(R.id.imgDetail2);
@@ -32,6 +31,8 @@ public class DetailActivity extends AppCompatActivity {
         final TextView detail2TextView = (TextView) findViewById(R.id.txtDetail2);
         final TextView detail3TextView = (TextView) findViewById(R.id.txtDetail3);
 
+
+        // Recieve and show view
         final int imageInts = getIntent().getIntExtra("imgID",R.drawable.do2);
         innerImageView.setImageResource(imageInts);
 
@@ -73,10 +74,38 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DetailActivity.this, Detail2Activity.class);
-
                 startActivity(intent);
             }
         });
+
+        detail1ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, PhotoViewActivity.class);
+                intent.putExtra("detail1IMG", detail1Ints);
+                startActivity(intent);
+            }
+        });
+
+        detail2ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, PhotoView2Activity.class);
+                intent.putExtra("detail2IMG", detail2Ints);
+                startActivity(intent);
+
+            }
+        });
+
+        detail3ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, PhotoView3Activity.class);
+                intent.putExtra("detail3IMG", detail3Ints);
+                startActivity(intent);
+            }
+        });
+
 
 
 
