@@ -47,11 +47,11 @@ public class RegistryActivity extends AppCompatActivity {
                 if (nameString.equals("") || userString.equals("") || passwordString.equals("")) {
 //                    Have Space ( ภาวะที่เป็น True )
 
-                    ad.setTitle("Have Space");
+                    ad.setTitle("มีช่องว่าง");
                     ad.setCancelable(false);
                     ad.setIcon(R.drawable.icon_alert);
-                    ad.setMessage("Please Fill in The Blank");
-                    ad.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    ad.setMessage("กรุณากรอกรายละเอียดในช่องว่าง");
+                    ad.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -74,13 +74,13 @@ public class RegistryActivity extends AppCompatActivity {
                                 passwordString,
                                 "http://androidthai.in.th/sky/addDataAdulvitC.php");
                         if (Boolean.parseBoolean(myPostData.get())) {
-                            Toast.makeText(getApplication(),"upload new User Success",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplication(),"อัพโหลดชื่อบัญชีผู้ใช้สำเร็จ",Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(RegistryActivity.this, Login1Activity.class);
                             finish();
 
 
                         } else {
-                            Toast.makeText(getApplication(),"Cannot Upload New User",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplication(),"ไม่สามารถอัพโหลดข้อมูลชื่อบัญชีผู้ใช้ใหม่",Toast.LENGTH_LONG).show();
 
                         }
 
