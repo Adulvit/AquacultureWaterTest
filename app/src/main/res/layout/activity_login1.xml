@@ -23,16 +23,16 @@
         <!--Logo-->
         <ImageView
 
-            android:layout_width="@dimen/icon"
-            android:layout_height="@dimen/icon"
-            android:src="@drawable/icon_logo" />
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:src="@drawable/icon_logo11" />
 
         <!--Title-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Water Quality Aqua"
+            android:text="@string/Water_Quality_Aqua"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/h1"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:hint="User Name :"
+                android:hint="@string/User_Name"
                 android:inputType="text"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimary" />
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:hint="Password :"
+                android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimary" />
@@ -127,9 +127,9 @@
             android:layout_height="wrap_content"
             android:text="@string/About_Me"
             android:layout_marginTop="@dimen/margin1"
-            android:textColor="@color/black"
+            android:textColor="#1565c0"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
 
     </LinearLayout>
